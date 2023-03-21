@@ -1,0 +1,8 @@
+<div
+  class="bg-{{severity|lower}}-background border-solid border border-{{severity|lower}}-border rounded-xl p-4 my-2 flex flex-row w-full"
+>
+  <div class="mr-3">
+    {% include "icons/alert-icon-"+severity|lower+".svg" %}
+  </div>
+  {% include "issue-codes/"+issue_code | replace("_", "-") | lower+".html" %}
+</div>

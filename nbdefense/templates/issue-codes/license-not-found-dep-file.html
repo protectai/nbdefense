@@ -1,0 +1,15 @@
+<div>
+  {% set issue_details = issue.details %}
+  <h3 class="font-bold">License Not Found</h3>
+  <p class="mt-4">Path: {{ issue_details.file_path }}</p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>{{issue_details.name}}</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Version</h3>
+      <p>{{issue_details.version}}</p>
+    </div>
+  </div>
+</div>

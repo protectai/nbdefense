@@ -1,0 +1,7 @@
+<div>
+  {% set issue_details = issue.details %}
+  <h3 class="font-bold">{{ issue_code | replace("_", " ") | title }}</h3>
+  <p class="mt-4">Path: {{ issue_details.file_path }}</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>Could not find a pinned version for package `{{ issue_details.name }}`</p>
+</div>

@@ -1,0 +1,29 @@
+<div class="w-full">
+  {% set issue_details = issue.details %}
+  <h3 class="font-bold">CVE</h3>
+  <p class="mt-4">Path: {{ issue_details.file_path }}</p>
+  <p>
+    Vulnerability:
+    <a
+      class="underline text-blue-600 hover:text-blue-800"
+      href="{{ issue_details.vulnerability['PrimaryURL'] }}"
+      target="_blank"
+      rel="noreferrer"
+      >{{ issue_details.vulnerability['VulnerabilityID'] }}</a
+    >
+  </p>
+  <div class="grid grid-cols-3 background-black w-full mt-4">
+    <div>
+      <h3 class="font-bold">Package</h3>
+      <p>{{ issue_details.vulnerability['PkgName'] }}</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Affected versions</h3>
+      <p>{{ issue_details.vulnerability['InstalledVersion'] }}</p>
+    </div>
+    <div>
+      <h3 class="font-bold">Fixed versions</h3>
+      <p>{{ issue_details.vulnerability['FixedVersion'] }}</p>
+    </div>
+  </div>
+</div>

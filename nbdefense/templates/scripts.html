@@ -1,0 +1,25 @@
+<script>
+  const filesScannedButton = document.getElementById('filesScannedButton');
+  const filesScannedDialog = document.getElementById('filesScannedDialog');
+  const filesScannedCloseButton = document.getElementById('filesScannedCloseButton');
+
+  filesScannedButton.addEventListener('click', () => {
+    if (typeof filesScannedDialog.showModal === 'function') {
+      filesScannedDialog.showModal();
+    }
+  });
+
+  // Allows click outside of dialog to close dialog
+  filesScannedDialog.addEventListener('click', () => {
+    filesScannedDialog.close();
+  });
+
+  // Add close button
+  filesScannedCloseButton.addEventListener('click', () => {
+    filesScannedDialog.close();
+  })
+
+  filesScannedDialog.firstElementChild.addEventListener('click', (event) => {
+    event.stopPropagation();
+  });
+</script>

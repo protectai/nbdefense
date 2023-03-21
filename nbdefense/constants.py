@@ -1,0 +1,120 @@
+TEMPDIR = "./.tmp"
+
+# Plugins are loaded by the order of their priority.
+# Highest priority plugins are loaded first.
+SCANNING_PLUGINS = [
+    "nbdefense.plugins.PIIPlugin",
+    "nbdefense.plugins.SecretsPlugin",
+    "nbdefense.plugins.LicenseDependencyFilePlugin",
+    "nbdefense.plugins.CVEDependencyFilePlugin",
+]
+
+AVAILABLE_REPORTING_MODULES = {
+    "json": "nbdefense.reports.JsonReport",
+    "html": "nbdefense.reports.HTMLReport",
+}
+
+DEFAULT_REPORTING_MODULE = AVAILABLE_REPORTING_MODULES["html"]
+
+DEFAULT_SETTINGS = {
+    "redact_secret": "PARTIAL",
+    "trivy_binary_path": "",
+    "plugins": {
+        "nbdefense.plugins.SecretsPlugin": {
+            "enabled": True,
+            "secrets_plugins": [
+                {"name": "SoftlayerDetector"},
+                {"name": "StripeDetector"},
+                {"name": "SendGridDetector"},
+                {"name": "NpmDetector"},
+                {"name": "KeywordDetector", "keyword_exclude": ""},
+                {"name": "IbmCosHmacDetector"},
+                {"name": "DiscordBotTokenDetector"},
+                {"name": "BasicAuthDetector"},
+                {"name": "AzureStorageKeyDetector"},
+                {"name": "ArtifactoryDetector"},
+                {"name": "AWSKeyDetector"},
+                {"name": "CloudantDetector"},
+                {"name": "GitHubTokenDetector"},
+                {"name": "IbmCloudIamDetector"},
+                {"name": "JwtTokenDetector"},
+                {"name": "MailchimpDetector"},
+                {"name": "PrivateKeyDetector"},
+                {"name": "SlackDetector"},
+                {"name": "SquareOAuthDetector"},
+                {"name": "TwilioKeyDetector"},
+                {"name": "Base64HighEntropyString", "limit": 4.5},
+                {"name": "HexHighEntropyString", "limit": 3.0},
+            ],
+        },
+        "nbdefense.plugins.PIIPlugin": {
+            "enabled": True,
+            "confidence_threshold": 0.8,
+            "entities": {
+                "US_PASSPORT": True,
+                "AU_MEDICARE": True,
+                "AU_TFN": True,
+                "AU_ACN": True,
+                "AU_ABN": True,
+                "UK_NHS": True,
+                "US_SSN": True,
+                "US_ITIN": True,
+                "US_DRIVER_LICENSE": True,
+                "US_BANK_NUMBER": True,
+                "MEDICAL_LICENSE": True,
+                "LOCATION": True,
+                "PHONE_NUMBER": True,
+                "NRP": True,
+                "IP_ADDRESS": True,
+                "EMAIL_ADDRESS": True,
+                "IBAN_CODE": True,
+                "CRYPTO": True,
+                "CREDIT_CARD": True,
+                "PERSON": True,
+            },
+        },
+        "nbdefense.plugins.LicenseDependencyFilePlugin": {
+            "enabled": True,
+            "accepted_licenses": [
+                "Apache License 2.0",
+                "Apache Software License",
+                "Apache 2.0",
+                "Apache-2.0",
+                "BSD",
+                "BSD License",
+                "BSD 3-Clause",
+                "BSD-3-Clause",
+                "GNU Library or Lesser General Public License (LGPL)",
+                "Microsoft Public License",
+                "MIT",
+                "MIT License",
+                "Python Software Foundation License",
+                "ISC License (ISCL)",
+                "MIT-0",
+            ],
+        },
+        "nbdefense.plugins.CVEDependencyFilePlugin": {"enabled": True},
+        "nbdefense.plugins.LicenseNotebookPlugin": {
+            "enabled": True,
+            "accepted_licenses": [
+                "Apache License 2.0",
+                "Apache Software License",
+                "Apache 2.0",
+                "Apache-2.0",
+                "BSD",
+                "BSD License",
+                "BSD 3-Clause",
+                "BSD-3-Clause",
+                "GNU Library or Lesser General Public License (LGPL)",
+                "Microsoft Public License",
+                "MIT",
+                "MIT License",
+                "Python Software Foundation License",
+                "ISC License (ISCL)",
+                "MIT-0",
+            ],
+            "licenses_for_notebooks_source": "HYBRID",
+        },
+        "nbdefense.plugins.CVENotebookPlugin": {"enabled": True},
+    },
+}

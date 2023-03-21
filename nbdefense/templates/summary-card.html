@@ -1,0 +1,16 @@
+<div
+  class="grid grid-cols-8 h-35 bg-white border-solid border-1 border-[#D8D8D8] rounded-md shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+  <div class="col-span-2 p-8">
+    <h3 class="text-sm font-thin">Files</h3>
+    <span class="text-3xl font-bold">{{(artifacts_scanned["requirements"]|length) +
+      (artifacts_scanned["notebooks"]|length)}}</span>
+  </div>
+  <div class="col-span-2 p-8">
+    <h3 class="text-sm font-thin">Checks ran</h3>
+    <span class="text-3xl font-bold">{{total_checks_run}}</span>
+  </div>
+  <div class="col-span-4 p-8">
+    <h3 class="text-sm font-thin">Scanned at</h3>
+    <span class="text-3xl font-bold">{{date}} &middot; {{time}}</span>
+  </div>
+</div>

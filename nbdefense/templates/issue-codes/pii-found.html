@@ -1,0 +1,22 @@
+<div class="w-full">
+  <h3 class="font-bold">{{ issue_code | replace("_", " ") | title | replace("Pii", "PII") }}</h3>
+  <p class="mt-4">Path: {{ issue.details.file_path }}</p>
+  <p class="mt-4"><b>Description</b>:</p>
+  <p>{{ issue.details.description }} with the following tag(s):</p>
+  <p>
+  <pre>{{ issue.details.summary_field | to_pretty_json | safe }}</pre>
+  </p>
+  <p class="mt-4">
+    <b>Location</b>: cell {{ issue.location.value }}
+  </p>
+  <div class="flex flex-row w-100 mt-4">
+    <div class="pr-4">
+      <p class="font-bold">Cell #{{ issue.cell.cell_index }}</p>
+    </div>   
+    <div
+      class="bg-white border-solid border border-none-border rounded-md overflow-x-auto w-[42rem]"
+    >
+      <span class="pl-4">{{ issue.cell | string() | safe }}</span>
+    </div>     
+  </div>
+</div>

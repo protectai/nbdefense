@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include 'header.html' %}
+
+<body>
+  <div class="bg-black-background absolute h-72 w-full text-white z-0">
+    {% include 'navbar.html' %}
+  </div>
+  <div class="max-w-4xl m-auto relative z-10 top-14 flex flex-col">
+    <div class="text-white mt-14 mb-6 h-14 flex flex-row">
+      <div class="flex flex-col">
+        <div class="text-sm font-thin">
+          {{codebase_root}}
+        </div>
+        <div class="text-3xl font-bold">
+          {{codebase_basename}}
+        </div>
+      </div>
+      <div class="ml-auto">
+        <button id="filesScannedButton" class="border border-[transparent] rounded-lg modal-button mr-2">View
+          files scanned</button>
+      </div>
+    </div>
+
+    {% include 'summary-card.html' %}
+
+    {% include "errors.html" %}
+
+    {% include 'issues.html' %}
+
+    {% include "files-scanned-dialog.html" %}
+
+    {% include 'footer.html' %}
+
+    {% include "scripts.html" %}
+</body>

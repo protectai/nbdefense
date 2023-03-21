@@ -1,0 +1,20 @@
+{% if errors %}
+<div
+  class="bg-critical-background border-solid border border-critical-border rounded-xl p-4 my-2 flex flex-row w-full mt-6 mb-0">
+  <div class="mr-3">{% include "icons/alert-icon-critical.svg" %}</div>
+  <div>
+    <h2><b>Errors</b>:</h2>
+    <ul class="list-disc pl-8">
+      {% for error in errors %}
+      <li>
+        Error occurred in the
+        <b>{{error.error_type.value}}</b>
+        portion of the
+        <b>{{error.plugin_name}}</b>
+        plugin. Message: {{error.message}}
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+{% endif %}

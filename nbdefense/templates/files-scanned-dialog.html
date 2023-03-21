@@ -1,0 +1,21 @@
+<dialog id="filesScannedDialog"
+  class="p-0 border border-solid border-[#D8D8D8] rounded-md shadow-[0_1px_3px_rgba(16,24,40,0.1),0_1px_2px_rgba(16,24,40,0.06)]">
+  <div class="p-4">
+    <div class="flex flex-row justify-between">
+      <h1 class="font-bold text-lg">Files scanned</h1>
+      <a id="filesScannedCloseButton" class="cursor-pointer flex items-center">
+        {% include "icons/x.svg" %}
+      </a>
+    </div>
+    <ul class="md:mr-14">
+      {% for artifact_name, artifacts in artifacts_scanned.items() %}
+      <li class="font-semibold text-xs mt-4">{{ artifact_name | title }}</li>
+      <ul class="text-sm font-mono">
+        {% for artifact in artifacts %}
+        <li>{{ artifact }} </li>
+        {% endfor %}
+      </ul>
+      {% endfor %}
+    </ul>
+  </div>
+</dialog>

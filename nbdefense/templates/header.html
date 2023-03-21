@@ -1,0 +1,52 @@
+<head>
+  <!-- tailwind cdn -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            "black-background": "#151515",
+
+            "critical-base": "#D01100",
+            "critical-background": "#FFFBFA",
+            "critical-border": "#FDA29B",
+
+            "high-base": "#ED6A5E",
+            "high-background": "#FFFBFA",
+            "high-border": "#FDA29B",
+
+            "medium-base": "#F4BD4F",
+            "medium-background": "#FFFDF8",
+            "medium-border": "#EFE1BC",
+
+            "low-base": "#07B6CE",
+            "low-background": "#E8FCFF",
+            "low-border": "#009AAE",
+
+            "none-background": "#F5F5F5",
+            "none-border": "#E0E0E0",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    .modal-button {
+      background: linear-gradient(#050f20, #050f20) padding-box,
+        linear-gradient(rgba(208, 213, 221, 1), rgba(208, 213, 221, 0.4)) border-box;
+      padding: 10px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    dialog::backdrop {
+      -webkit-backdrop-filter: blur(2px);
+      backdrop-filter: blur(2px);
+      background: rgba(3, 10, 27, 0.7);
+    }
+  </style>
+
+  <title>Protect AI | NB Defense Report</title>
+</head>
