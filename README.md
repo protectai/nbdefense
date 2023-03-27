@@ -1,4 +1,32 @@
-# NBDefense-private
+# NB Defense
+
+## Quick Start
+
+1. Install NBDefense using [pip](https://pypi.org/project/nbdefense/):
+
+    ```bash
+    $ pip install nbdefense
+    ```
+
+2. Install Spacy Model `en_core_web_trf` (required if you are using the PII plugin):
+
+    ```bash
+    $ python -m spacy download en_core_web_trf
+    ```
+
+3. Run a scan with nbdefense:
+
+    ```bash
+    $ nbdefense scan -s
+    ```
+
+## Dev installation
+
+To install development dependencies to your environment and set up the cli for live updates, clone `nbdefense` and run the following command in the root of the repository:
+
+```bash
+$ make install-dev
+```
 
 ## Poetry
 
@@ -8,14 +36,6 @@ Tips:
 
 - You can add a dependency with the command `poetry add pendulum==0.0.0`. To specify a group use `poetry add pendulum==0.0.0 --group dev`
 - You can remove a dependency with the command `poetry remove pendulum`
-
-## Dev installation
-
-Install the development dependencies to your environment and set up the cli for live updates with:
-
-```bash
-$ make install-dev
-```
 
 ## Formatting
 
