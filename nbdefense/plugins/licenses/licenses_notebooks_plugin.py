@@ -39,7 +39,7 @@ class UnapprovedLicenseImportIssueDetails(UnapprovedLicenseIssueDetails):
             "package_name": self.package_name,
             "package_version": self.package_version,
             "description": self.description,
-            "file_path": self.file_path,
+            "file_path": str(self.file_path),
         }
         if self.unapproved_license:
             package_data["unapproved_license"] = self.unapproved_license
