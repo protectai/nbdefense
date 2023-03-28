@@ -29,6 +29,7 @@ build-prod: version
 
 version:
 	echo "__version__ = '$(VERSION)'" > nbdefense/_version.py
+	poetry version $(VERSION)
 
 lint: bandit mypy
 

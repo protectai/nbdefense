@@ -43,3 +43,6 @@ jobs:
       - name: Build Package
         run: |
           make build-prod
+      - name: PYPI Publish Dry Run
+        run: |
+          poetry publish --dry-run
