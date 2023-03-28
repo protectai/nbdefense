@@ -11,7 +11,7 @@
 If you find a vulnerability in NB Defense, perform the following steps:
 
 1. [Open an issue](https://github.com/protectai/nbdefense/issues/new?assignees=&labels=bug&template=bug_report.md&title=[BUG]%20Security%20Vulnerability) in the nbdefense repo. Use `[BUG] Security Vulnerability` as the title and do not include any vulnerability details in the issue description.
-2. Send us an email at `TBD` with the following:  
+2. Send us an email at `security@protectai.com` with the following:  
     - The link to the issue you created above.
     - Your GitHub handle.
     - Details about the vulnerability including:
