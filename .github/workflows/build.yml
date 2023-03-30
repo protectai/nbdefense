@@ -2,10 +2,9 @@ name: Build
 
 on:
   push:
-    branches:
-      - "main"
-    tags:
-      - v*
+    branches: main
+  pull_request:
+    branches: '*'
 
 permissions:
   id-token: write
