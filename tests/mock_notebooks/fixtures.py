@@ -152,7 +152,7 @@ def mock_notebook_as_json(raw_notebook_cells: List[Dict[str, List[str]]]) -> str
                 mock_nb.add_cell(
                     cell_type=MockCellType.SOURCE,
                     source=cell["source"],
-                    data_frame=cell["dataframe_output"],  # type: ignore[arg-type]
+                    data_frame=cell["dataframe_output"],
                 )
             else:
                 mock_nb.add_cell(cell_type=MockCellType.SOURCE, source=cell["source"])
