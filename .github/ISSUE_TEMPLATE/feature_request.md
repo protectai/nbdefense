@@ -1,7 +1,7 @@
 ---
 name: Feature request
 about: Suggest an idea for NB Defense
-title: ''
+title: "[A Few Words Describing the Feature]"
 labels: enhancement
 assignees: ''
 

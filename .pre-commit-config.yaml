@@ -21,7 +21,6 @@ repos:
     - id: mypy
       args: ["--ignore-missing-imports", "--strict", "--check-untyped-defs"]
       additional_dependencies: [
-        "pandas-stubs==1.5.3.230304",
         "types-requests==2.28.11.15",
         "types-tqdm==4.65.0.0", 
         "pytest==7.1.3", 
