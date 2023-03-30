@@ -1,7 +1,7 @@
 ---
 name: Documentation issue report
 about: Create a report to help us improve our documentation
-title: ''
+title: "[A Few Words Describing the Issue]"
 labels: bug, documentation
 assignees: ''
 
