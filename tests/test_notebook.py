@@ -51,7 +51,7 @@ class TestNotebookParsing:
             elif "dataframe_output" in data:
                 cell = mock_notebook.output_cells[index]
                 assert cell.cell_type == OutputCellType.DATAFRAME
-                df: pd.DataFrame = data["dataframe_output"]  # type: ignore[assignment]
+                df: pd.DataFrame = data["dataframe_output"]
                 assert [
                     str(elem) for elem in list(df.columns.values)
                 ] == cell.data_cells[  # type: ignore[attr-defined]
