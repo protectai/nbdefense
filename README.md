@@ -28,7 +28,6 @@ For more details and [documentation](https://nbdefense.ai) visit these links:
 - [Documentation](https://nbdefense.ai)
 
 - [Getting Started on a Local Machine](https://nbdefense.ai/getting-started/cli)
-- [Getting Started on with Cloud Services](https://nbdefense.ai/getting-started/cloud-services)
 
 ## 💪 Contributing
 
