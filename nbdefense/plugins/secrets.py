@@ -21,7 +21,7 @@ from nbdefense.issues import (
 )
 from nbdefense.notebook import Cell, OutputCellType
 from nbdefense.plugins.plugin import Plugin, ScanTarget
-from nbdefense.settings import Settings
+from nbdefense.settings import Settings, UnknownSettingsValueError
 
 logger = logging.getLogger(__name__)
 
@@ -44,9 +44,9 @@ class RedactSecretEnum(str, Enum):
     `HASH` will replace the full secret with its hashed value.
     """
 
-    PARTIAL = "PARTIAL"
-    ALL = "ALL"
-    HASH = "HASH"
+    PARTIAL = "partial"
+    ALL = "all"
+    HASH = "hash"
 
     def to_json(self) -> str:
         return self.name
@@ -179,11 +179,15 @@ class SecretsPlugin(Plugin):
                 issue.character_start_index : issue.character_end_index
             ]
             redacted_value = "******"
-            redact_secret = settings.get("redact_secret")
+            redact_secret = str(settings.get("redact_secret")).lower()
             if redact_secret == RedactSecretEnum.PARTIAL:
                 redacted_value = f"{secret_value[:2]}..{secret_value[-2:]}"
             elif redact_secret == RedactSecretEnum.HASH:
                 redacted_value = hashlib.md5(secret_value.encode()).hexdigest()  # nosec
+            elif redact_secret == RedactSecretEnum.ALL:
+                pass
+            else:
+                raise UnknownSettingsValueError("redact_secret", redact_secret)
 
             issue.cell.scrubbed_lines[issue.line_index] = re.sub(
                 re.escape(secret_value),
