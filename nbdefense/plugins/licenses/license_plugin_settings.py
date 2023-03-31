@@ -1,10 +1,10 @@
 from enum import Enum
 from typing import Any, Dict, List
 
-from nbdefense.settings import Settings, UnknownSettingsError
+from nbdefense.settings import Settings, UnknownSettingsValueError
 
 
-class LicensePluginSource(Enum):
+class LicensePluginSource(str, Enum):
     HYBRID = "hybrid"  # Looks for licenses in local pip environment and uses the pypi api when a package is not installed locally
     PYPI = "pypi"  # Scans for licenses using PYPI api only
     LOCAL = "local"  # Scans for licenses in local pip environment only
@@ -24,15 +24,14 @@ class LicensePluginSettings(Settings):
         if isinstance(accepted_licenses, list):
             return accepted_licenses
         else:
-            raise UnknownSettingsError("accepted_licenses")
+            raise UnknownSettingsValueError("accepted_licenses", accepted_licenses)
 
     def get_licenses_for_notebooks_source(self) -> LicensePluginSource:
-        source = super().get("licenses_for_notebooks_source")
-        if source == "local":
-            return LicensePluginSource.LOCAL
-        elif source == "hybrid":
-            return LicensePluginSource.HYBRID
-        elif source == "pypi":
-            return LicensePluginSource.PYPI
-        else:
-            raise UnknownSettingsError("licenses_for_notebooks_source")
+        source: str = str(super().get("licenses_for_notebooks_source")).lower()
+        if (
+            source == LicensePluginSource.LOCAL
+            or source == LicensePluginSource.HYBRID
+            or source == LicensePluginSource.PYPI
+        ):
+            return LicensePluginSource(source)
+        raise UnknownSettingsValueError("licenses_for_notebooks_source", source)

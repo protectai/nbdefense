@@ -46,7 +46,20 @@ class UnknownSettingsError(Exception):
         super().__init__(*args)
 
     def __str__(self) -> str:
-        return f"Unknown setting: {self.setting_accessed} - {super().__str__()}"
+        return f"Unknown setting: {self.setting_accessed}"
+
+
+class UnknownSettingsValueError(UnknownSettingsError):
+    setting_value: str
+
+    def __init__(
+        self, setting_accessed: str, setting_value: str, *args: object
+    ) -> None:
+        self.setting_value = setting_value
+        super().__init__(setting_accessed, *args)
+
+    def __str__(self) -> str:
+        return f"Setting '{self.setting_accessed}' has unknown value: '{self.setting_value}'"
 
 
 class SettingsUtils:
