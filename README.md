@@ -3,7 +3,7 @@
 [![bandit](https://github.com/protectai/nbdefense/actions/workflows/bandit.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/bandit.yml)
 [![build](https://github.com/protectai/nbdefense/actions/workflows/build.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/build.yml)
 [![black](https://github.com/protectai/nbdefense/actions/workflows/black.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/black.yml)
-[![mypy](https://github.com/protectai/nbdefense/actions/workflows/mypi.yml/badge.svt)](https://github.com/protectai/nbdefense/actions/workflows/mypi.yml)
+[![mypy](https://github.com/protectai/nbdefense/actions/workflows/mypy.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/mypy.yml)
 [![tests](https://github.com/protectai/nbdefense/actions/workflows/test.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/test.yml)
 [![License: Apache 2.0](https://img.shields.io/crates/l/apa)](https://opensource.org/license/apache-2-0/)
 
