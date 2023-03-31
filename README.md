@@ -1,107 +1,37 @@
-# NB Defense
+# 🛡️ NB Defense
 
-## Quick Start
+[![bandit](https://github.com/protectai/nbdefense/actions/workflows/bandit.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/bandit.yml)
+[![build](https://github.com/protectai/nbdefense/actions/workflows/build.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/build.yml)
+[![black](https://github.com/protectai/nbdefense/actions/workflows/black.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/black.yml)
+[![mypy](https://github.com/protectai/nbdefense/actions/workflows/mypi.yml/badge.svt)](https://github.com/protectai/nbdefense/actions/workflows/mypi.yml)
+[![tests](https://github.com/protectai/nbdefense/actions/workflows/test.yml/badge.svg)](https://github.com/protectai/nbdefense/actions/workflows/test.yml)
+[![License: Apache 2.0](https://img.shields.io/crates/l/apa)](https://opensource.org/license/apache-2-0/)
 
-1. Install NBDefense using [pip](https://pypi.org/project/nbdefense/):
-
-    ```bash
-    $ pip install nbdefense
-    ```
-
-2. Install Spacy Model `en_core_web_trf` (required if you are using the PII plugin):
-
-    ```bash
-    $ python -m spacy download en_core_web_trf
-    ```
-
-3. Run a scan with nbdefense:
-
-    ```bash
-    $ nbdefense scan -s
-    ```
-
-## Dev installation
-
-To install development dependencies to your environment and set up the cli for live updates, clone `nbdefense` and run the following command in the root of the repository:
+## 🏃‍♀️ Quick Start
 
 ```bash
-$ make install-dev
+$ pip install nbdefense
 ```
 
-## Poetry
+## 🙋‍♂️ What is NB Defense?
 
-The following install commands require [Poetry](https://python-poetry.org/). To install Poetry you can follow [this installation guide](https://python-poetry.org/docs/#installation). Poetry can also be installed with brew using the command `brew install poetry`.
+Brought to you by Protect AI, NB Defense is a CLI tool and SDK that encourages you to think about security throughout every step of your machine learning development process. You can use nbdefense to scan for [Secrets](https://nbdefense.ai/supported-scans/detecting-secrets), [Personally Identifiable Information (PII)](https://nbdefense.ai/supported-scans/detecting-PII), [Common Vulnerabilities and Exposures(CVE)](https://nbdefense.ai/supported-scans/detecting-CVEs), and [Licenses](https://nbdefense.ai/supported-scans/detecting-licenses) in your notebook and dependency files.
 
-Tips:
+NB Defense also acts as a SDK for our [Jupyter Lab Extension](https://github.com/protectai/nbdefense-jupyter). Visit our [documentation](https://nbdefense.ai), or the repository below to learn more.
 
-- You can add a dependency with the command `poetry add pendulum==0.0.0`. To specify a group use `poetry add pendulum==0.0.0 --group dev`
-- You can remove a dependency with the command `poetry remove pendulum`
+- [Jupyter Lab Extension Repository](https://github.com/protectai/nbdefense-jupyter)
 
-## Formatting
+## 📄 Documentation
 
-Run the formatter with:
+For more details and [documentation](https://nbdefense.ai) visit these links:
 
-```bash
-$ make format
-```
+- [Documentation](https://nbdefense.ai)
 
-## Prod build
+- [Getting Started on a Local Machine](https://nbdefense.ai/getting-started/cli)
+- [Getting Started on with Cloud Services](https://nbdefense.ai/getting-started/cloud-services)
 
-To build the cli for prod installs run the following:
+## 💪 Contributing
 
-```bash
-$ make install
-$ make build-prod
-```
+Welcome to the team! We are open to contributions and working with the community to make notebooks safer for everyone.
 
-or if you want dynamic versioning with dunamai
-
-```bash
-$ make install-prod
-$ make build-prod
-```
-
-# CLI Usage
-
-## `nbdefense scan` command
-
-```
-nbdefense scan --help
-Usage: nbdefense scan [OPTIONS] [PATH]
-
-  Scan [PATH] for .ipynb files for potential issues.
-
-Options:
-  -r, --recursive                 Scan all nested directories for .ipynb
-                                  files.
-  -s, --serve                     Run an HTTP Server to view the report
-                                  instead of persisting the report as an html
-                                  file.
-  -q, --quiet                     Suppress all output.
-  -d, --dependency-file PATH      Specify a requirements.txt file to scan for
-                                  CVEs and license compatibility.
-  -f, --output-file FILE          Specify an output filename for the report.
-  -o, --output-format [json|html]
-                                  The output format for the report.
-  -y, --yes                       Bypass all prompts with an affirmative
-                                  response.
-  --settings-file FILE            Specify a settings file to use for the scan.
-                                  Defaults to [PATH]/settings.toml.
-  --no-progress-bars              Hide progress bars, but keep other logging
-                                  active.
-  --help                          Show this message and exit.
-```
-
-## `nbdefense settings create` command
-
-```
-nbdefense settings create --help
-Usage: nbdefense settings create [OPTIONS]
-
-  Create a settings file in the current working directory.
-
-Options:
-  -f, --force          Overwrite existing settings file if it exists.
-  -l, --location FILE  The specific filepath to write the settings.toml file.
-  --help               Show this message and exit.
-```
+If you would like to contribute, please visit [CONTRIBUTING.md](https://github.com/protectai/nbdefense/blob/main/CONTRIBUTING.md) to get started as a developer, or to suggest bug fixes, improvements, or new features follow [this link](https://nbdefense.ai/contributing) to our contributing documentation.
