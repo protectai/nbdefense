@@ -2,7 +2,7 @@
 
 Welcome! We're glad to have you. If you would like to report a bug, request a new feature or enhancement, follow [this link](https://nbdefense.ai/contributing) for more help.
 
-If you're looking for documentation on how to use NB Defense, you can find that [here](https://nbdefense.ai)
+If you're looking for documentation on how to use NB Defense, you can find that [here](https://nbdefense.ai).
 
 ## ❗️ Requirements
 
