@@ -10,7 +10,7 @@
 ## 🏃‍♀️ Quick Start
 
 ```bash
-$ pip install nbdefense
+pip install nbdefense
 ```
 
 ## 🙋‍♂️ What is NB Defense?

@@ -25,7 +25,7 @@ If you're looking for documentation on how to use NB Defense, you can find that 
 2. To install development dependencies to your environment and set up the cli for live updates, run the following command in the root of the `nbdefense` directory:
 
     ```bash
-    $ make install-dev
+    make install-dev
     ```
 
 3. You are now ready to start developing!
