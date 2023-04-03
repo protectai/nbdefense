@@ -24,8 +24,8 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to light mode
-  logo: /assets/imgs/top-logo.svg
-  favicon: /assets/imgs/favicon.svg
+  logo: assets/imgs/top-logo.svg
+  favicon: assets/imgs/favicon.svg
 
 extra_css:
   - assets/css/extra.css

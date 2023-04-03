@@ -8,7 +8,7 @@ NB Defense is an open source tool for detecting security issues in Jupyter Noteb
 
 Using the JupyterLab Extension is ideal for correcting issues directly within the JupyterLab environment. You can quickly scan and re-scan a single notebook in order to correct any potential security issues within your environment.
 
-<video autoplay loop muted src="/imgs/jupyter-extension-example.mp4">
+<video autoplay loop muted src="../imgs/jupyter-extension-example.mp4">
     Jupyter Extension Example
 </video>
 
@@ -18,6 +18,6 @@ Using the JupyterLab Extension is ideal for correcting issues directly within th
 
 The CLI is a better option if you have a lot of notebooks that you would like to scan simultaneously or if you would like to automatically scan notebooks that are going into a central repository. It can also help you set a baseline for correcting individual notebooks with the JupyterLab Extension at a later time.
 
-![CLI help message](/imgs/cli-help-message.png)
+![CLI help message](../imgs/cli-help-message.png)
 
 [Try it out!](cli.md){ .md-button .md-button--primary }

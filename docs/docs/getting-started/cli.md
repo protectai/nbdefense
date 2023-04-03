@@ -105,7 +105,7 @@ Scan results can be generated as either HTML or JSON. The HTML results will be m
 
 HTML is the default output format for the NB Defense CLI.
 
-![NB Defense HTML Scan Report](/imgs/html-scan-report.png)
+![NB Defense HTML Scan Report](../imgs/html-scan-report.png)
 
 There are two sections of the HTML report that will always be present:
 
@@ -117,7 +117,7 @@ There are two sections of the HTML report that will always be present:
 
 An errors section of the report may be present if an exception happened during the scan.
 
-![NB Defense HTML Scan Report with Errors](/imgs/html-scan-with-errors.png)
+![NB Defense HTML Scan Report with Errors](../imgs/html-scan-with-errors.png)
 
 ### The JSON Report
 

@@ -41,7 +41,7 @@
     ```bash
     jupyter lab
     ```
-    ![NB Defense extension successfully loaded into JupyterLab](/imgs/jle-initial-setup.png)
+    ![NB Defense extension successfully loaded into JupyterLab](../imgs/jle-initial-setup.png)
 
 ## Usage
 
@@ -49,13 +49,13 @@ Once the extension has been installed, you can now start scanning your notebooks
 
 Installing the NB Defense JupyterLab Extension (JLE) will add a tab with an NB icon to your side bar. Clicking this will take you to the NB Defense JLE panel. From there you can run a scan or view scan results for the currently focused notebook.
 
-<video autoplay loop muted src="/imgs/open-nb-defense-panel.mp4">
+<video autoplay loop muted src="../../imgs/open-nb-defense-panel.mp4">
     Open NB Defense panel video
 </video>
 
 You can also run a scan by clicking the `Scan with NB Defense` button in the notebook toolbar.
 
-<video autoplay loop muted src="/imgs/run-scan-from-toolbar.mp4">
+<video autoplay loop muted src="../../imgs/run-scan-from-toolbar.mp4">
     Run a scan from the toolbar video
 </video>
 
@@ -63,11 +63,11 @@ You can also run a scan by clicking the `Scan with NB Defense` button in the not
 
 Within the side panel we display a list of issues detected during the scan. The information on the side bar includes the "Issue type", a short description of the issue, and which cell index the issue was found in.
 
-![Side panel with results](/imgs/side-panel-with-results.png){: style="height:600px"}
+![Side panel with results](../../imgs/side-panel-with-results.png){: style="height:600px"}
 
 Clicking on one of the issues here will focus the relevant cell. From here you can see that the characters that triggered the scan will be underlined in the editor. Additionally, all of the cells that contain issues will have a red background.
 
-<video autoplay loop muted src="/imgs/focus-cell-from-issue.mp4">
+<video autoplay loop muted src="../../imgs/focus-cell-from-issue.mp4">
     Focus cell from issue video
 </video>
 
