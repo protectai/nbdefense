@@ -1,367 +1,360 @@
 {% extends "main.html" %} 
 {% block tabs %} 
   {{ super() }}
-  {% if "navigation.tabs.sticky" not in features %}
-    {% if "navigation.tabs" in features %}
-      {% include "partials/tabs.html" %}
-    {% endif %}
-  {% endif %}
-  <div class="custom-landing-page">
-    <link rel="stylesheet" type="text/css" href="./assets/css/landing.css" />
-    <section class="nbdocs-container">
-      <!-- Header -->
-      <div class="nbdocs-section-top">
-        <!-- Title -->
-        <div class="nbdocs-title">
-          <p class="nbdocs-heading-1">
-            Secure your Jupyter Notebooks
+  <link rel="stylesheet" type="text/css" href="./assets/css/landing.css" />
+  <section class="nbdocs-container">
+    <!-- Header -->
+    <div class="nbdocs-section-top">
+      <!-- Title -->
+      <div class="nbdocs-title">
+        <p class="nbdocs-heading-1">
+          Secure your Jupyter Notebooks
+        </p>
+        <p class="nbdocs-heading-4 nbdocs-subtitle text-grey-200">
+          Brought to you by
+          <a class="text-orange text-link effect-transition" href="https://protectai.com" title="Protect AI"
+          target="_blank">Protect AI</a>,
+          NB Defense is a JupyterLab Extension as well as a CLI tool that
+          encourages you to think about security throughout every step of your
+          machine learning development process. NB Defense is now open source -
+          Begin securing your notebooks today!
+        </p>
+      </div>
+      <!-- Top images -->
+      <div class="nbdocs-top-image">
+        <img src="assets/imgs/header-image.svg" alt="" draggable="false" />
+      </div>
+      <!-- Get Started -->
+      <div class="nbdoc-buttons">
+        <a
+          href="{{ page.next_page.url | url }}"
+          title="{{ page.next_page.title | e }}"
+          class="primary-button effect-transition"
+        >
+          Get Started
+        </a>
+      </div>
+      <!-- Circle Arrow Long -->
+      <div class="nbdocs-circle-arrow">
+        <img src="assets/imgs/circle-arrow.svg" alt="" draggable="false" />
+      </div>
+    </div>
+
+    <!-- Section 1 - Vulnerabilities -->
+    <div class="nbdocs-section-1">
+      <!-- Section Title -->
+      <p class="nbdocs-heading-1 section-title text-primary-900">
+        Detect various vulnerabilities
+      </p>
+      <!-- Core value section -->
+      <div class="core-value-items">
+        <!-- Secrets -->
+        <div class="core-value-item">
+          <img
+            class="core-value-item-avatar"
+            src="assets/imgs/vulnerability-secrets.svg"
+            alt="Secrets"
+            draggable="false"
+          />
+          <p class="nbdocs-heading-3 text-primary-900">Secrets</p>
+          <p class="nbdocs-heading-4 text-grey-700">
+            API keys, private keys, authentication tokens, and other security
+            credentials.
           </p>
-          <p class="nbdocs-heading-4 nbdocs-subtitle text-grey-200">
-            Brought to you by
-            <a class="text-orange text-link effect-transition" href="https://protectai.com" title="Protect AI"
-            target="_blank">Protect AI</a>,
-            NB Defense is a JupyterLab Extension as well as a CLI tool that
-            encourages you to think about security throughout every step of your
-            machine learning development process. NB Defense is now open source -
-            Begin securing your notebooks today!
+        </div>
+        <!-- PII -->
+        <div class="core-value-item">
+          <img
+            class="core-value-item-avatar"
+            src="assets/imgs/vulnerability-pii.svg"
+            alt="PII"
+            draggable="false"
+          />
+          <p class="nbdocs-heading-3 text-primary-900">PII</p>
+          <p class="nbdocs-heading-4 text-grey-700">
+            Sensitive data and personally identifiable information.
           </p>
         </div>
-        <!-- Top images -->
-        <div class="nbdocs-top-image">
-          <img src="assets/imgs/header-image.svg" alt="" draggable="false" />
+        <!-- CVE -->
+        <div class="core-value-item">
+          <img
+            class="core-value-item-avatar"
+            src="assets/imgs/vulnerability-cve.svg"
+            alt="CVE"
+            draggable="false"
+          />
+          <p class="nbdocs-heading-3 text-primary-900">CVE</p>
+          <p class="nbdocs-heading-4 text-grey-700">
+            CVE vulnerabilities and exposures in ML OSS frameworks, libraries, and
+            packages.
+          </p>
         </div>
-        <!-- Get Started -->
-        <div class="nbdoc-buttons">
-          <a
-            href="{{ page.next_page.url | url }}"
-            title="{{ page.next_page.title | e }}"
-            class="primary-button effect-transition"
-          >
-            Get Started
-          </a>
-        </div>
-        <!-- Circle Arrow Long -->
-        <div class="nbdocs-circle-arrow">
-          <img src="assets/imgs/circle-arrow.svg" alt="" draggable="false" />
-        </div>
-      </div>
-
-      <!-- Section 1 - Vulnerabilities -->
-      <div class="nbdocs-section-1">
-        <!-- Section Title -->
-        <p class="nbdocs-heading-1 section-title text-primary-900">
-          Detect various vulnerabilities
-        </p>
-        <!-- Core value section -->
-        <div class="core-value-items">
-          <!-- Secrets -->
-          <div class="core-value-item">
-            <img
-              class="core-value-item-avatar"
-              src="assets/imgs/vulnerability-secrets.svg"
-              alt="Secrets"
-              draggable="false"
-            />
-            <p class="nbdocs-heading-3 text-primary-900">Secrets</p>
-            <p class="nbdocs-heading-4 text-grey-700">
-              API keys, private keys, authentication tokens, and other security
-              credentials.
-            </p>
-          </div>
-          <!-- PII -->
-          <div class="core-value-item">
-            <img
-              class="core-value-item-avatar"
-              src="assets/imgs/vulnerability-pii.svg"
-              alt="PII"
-              draggable="false"
-            />
-            <p class="nbdocs-heading-3 text-primary-900">PII</p>
-            <p class="nbdocs-heading-4 text-grey-700">
-              Sensitive data and personally identifiable information.
-            </p>
-          </div>
-          <!-- CVE -->
-          <div class="core-value-item">
-            <img
-              class="core-value-item-avatar"
-              src="assets/imgs/vulnerability-cve.svg"
-              alt="CVE"
-              draggable="false"
-            />
-            <p class="nbdocs-heading-3 text-primary-900">CVE</p>
-            <p class="nbdocs-heading-4 text-grey-700">
-              CVE vulnerabilities and exposures in ML OSS frameworks, libraries, and
-              packages.
-            </p>
-          </div>
-          <!-- Third-Party Licenses -->
-          <div class="core-value-item">
-            <img
-              class="core-value-item-avatar"
-              src="assets/imgs/vulnerability-third-party.svg"
-              alt="Third-Party Licenses"
-              draggable="false"
-            />
-            <p class="nbdocs-heading-3 text-primary-900">Third-Party Licenses</p>
-            <p class="nbdocs-heading-4 text-grey-700">
-              Non-permissive licenses in ML OSS frameworks, libraries, and packages.
-            </p>
-          </div>
-        </div>
-        <!-- Circle Arrow Long -->
-        <div class="nbdocs-circle-arrow">
-          <img src="assets/imgs/circle-arrow.svg" alt="" draggable="false" />
+        <!-- Third-Party Licenses -->
+        <div class="core-value-item">
+          <img
+            class="core-value-item-avatar"
+            src="assets/imgs/vulnerability-third-party.svg"
+            alt="Third-Party Licenses"
+            draggable="false"
+          />
+          <p class="nbdocs-heading-3 text-primary-900">Third-Party Licenses</p>
+          <p class="nbdocs-heading-4 text-grey-700">
+            Non-permissive licenses in ML OSS frameworks, libraries, and packages.
+          </p>
         </div>
       </div>
-
-      <!-- Section 2 - Features -->
-      <div class="nbdocs-section-2">
-        <!-- Section Title -->
-        <p class="nbdocs-heading-1 section-title text-white">
-          NB Defense Features
-        </p>
-        <!-- Feature Section -->
-        <div class="nbdocs-feature">
-          <!-- Contextual Guidance within Jupyter -->
-          <div class="nbdocs-feature-item">
-            <div class="nbdocs-feature-item-image">
-              <div class="lightgallery">
-                <a
-                  href="assets/imgs/feature-image-jle.svg"
-                  data-sub-html="Contextual Guidance within JupyterLab"
-                >
-                  <img
-                    alt="Contextual Guidance within JupyterLab"
-                    src="assets/imgs/feature-image-jle.svg"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="nbdocs-feature-description">
-              <p class="nbdocs-heading-2">Contextual Guidance within JupyterLab</p>
-              <p class="nbdocs-heading-4 text-grey-200">
-                With the NB Defense JupyterLab extension, you can leverage rich contextual help to
-                identify problem areas within your Notebook. This feature
-                streamlines the security review process by pinpointing areas of
-                concern directly in-line within the notebook.
-              </p>
-              <a
-                class="nbdocs-heading-4 learn-more effect-transition text-orange"
-                href="{{ page.next_page.url | url }}"
-                title="{{ page.next_page.title | e }}"
-              >
-                Learn more {% include "assets/imgs/branch-bottom.svg" %}
-              </a>
-            </div>
-          </div>
-          <!-- Advanced Repository Scanning -->
-          <div class="nbdocs-feature-item">
-            <div class="nbdocs-feature-item-image">
-              <div class="lightgallery">
-                <a
-                  href="assets/imgs/feature-image-repository-scan.svg"
-                  data-sub-html="Advanced Repository Scanning"
-                >
-                  <img
-                    alt="Advanced Repository Scanning"
-                    src="assets/imgs/feature-image-repository-scan.svg"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="nbdocs-feature-description">
-              <p class="nbdocs-heading-2">Advanced Repository Scanning</p>
-              <p class="nbdocs-heading-4 text-grey-200">
-                The NB Defense CLI is designed to facilitate scanning of an entire
-                Git Repo or folders containing notebooks, enabling you to
-                leverage NB Defense's entire security capabilities outside of Jupyter environment. <br/>
-                The CLI tool can be inserted into
-                Continuous Integration (CI) systems as a pre-commit hook, ensuring a
-                streamlined development process.
-              </p>
-              <a
-                class="nbdocs-heading-4 learn-more effect-transition text-orange"
-                href="{{ page.next_page.url | url }}"
-                title="{{ page.next_page.title | e }}"
-              >
-                Learn more {% include "assets/imgs/branch-bottom.svg" %}
-              </a>
-            </div>
-          </div>
-          <!-- CVE Identification -->
-          <div class="nbdocs-feature-item">
-            <div class="nbdocs-feature-item-image">
-              <div class="lightgallery">
-                <a
-                  href="assets/imgs/feature-image-cve.svg"
-                  data-sub-html="CVE Identification"
-                >
-                  <img
-                    alt="CVE Identification"
-                    src="assets/imgs/feature-image-cve.svg"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="nbdocs-feature-description">
-              <p class="nbdocs-heading-2">CVE Identification</p>
-              <p class="nbdocs-heading-4 text-grey-200">
-                Within the JupyterLab extension, there is an innovative CVE scanner (first to market)
-                which looks for code dependencies that are currently being imported by your
-                Notebook and installed in your Python Kernel. This provides you with
-                a lens on potential security risks that may be imported into your notebooks.
-              </p>
-              <a
-                class="nbdocs-heading-4 learn-more effect-transition text-orange"
-                href="{{ page.next_page.url | url }}"
-                title="{{ page.next_page.title | e }}"
-              >
-                Learn more {% include "assets/imgs/branch-bottom.svg" %}
-              </a>
-            </div>
-          </div>
-          <!-- Customizable Scanning Options -->
-          <div class="nbdocs-feature-item">
-            <div class="nbdocs-feature-item-image">
-              <div class="lightgallery">
-                <a
-                  href="assets/imgs/feature-image-customizable.svg"
-                  data-sub-html="Customizable Scanning Options"
-                >
-                  <img
-                    alt="Customizable Scanning Options"
-                    src="assets/imgs/feature-image-customizable.svg"
-                  />
-                </a>
-              </div>
-            </div>
-            <div class="nbdocs-feature-description">
-              <p class="nbdocs-heading-2">Customizable Scanning Options</p>
-              <p class="nbdocs-heading-4 text-grey-200">
-                The JupyterLab extension and CLI can both be easily configured to scan for specific
-                types of secrets, PII, and third-party licenses. This allows you to
-                set the appropriate sensitivity of the scan and tailor the security
-                review process to your specific needs.
-              </p>
-              <a
-                class="nbdocs-heading-4 learn-more effect-transition text-orange"
-                href="{{ page.next_page.url | url }}"
-                title="{{ page.next_page.title | e }}"
-              >
-                Learn more {% include "assets/imgs/branch-bottom.svg" %}
-              </a>
-            </div>
-          </div>
-        </div>
-        <!-- Circle Arrow Long -->
-        <div class="nbdocs-circle-arrow">
-          <img src="assets/imgs/circle-arrow.svg" alt="" draggable="false" />
-        </div>
+      <!-- Circle Arrow Long -->
+      <div class="nbdocs-circle-arrow">
+        <img src="assets/imgs/circle-arrow.svg" alt="" draggable="false" />
       </div>
+    </div>
 
-      <!-- Section 3 - Community -->
-      <div class="nbdocs-section-3">
-        <p class="nbdocs-heading-1 section-title text-white">
-          Protect AI and the MLSecOps Community
-        </p>
-        <div class="text-content">
-          <p class="nbdocs-heading-4 text-grey-200">
+    <!-- Section 2 - Features -->
+    <div class="nbdocs-section-2">
+      <!-- Section Title -->
+      <p class="nbdocs-heading-1 section-title text-white">
+        NB Defense Features
+      </p>
+      <!-- Feature Section -->
+      <div class="nbdocs-feature">
+        <!-- Contextual Guidance within Jupyter -->
+        <div class="nbdocs-feature-item">
+          <div class="nbdocs-feature-item-image">
+            <div class="lightgallery">
+              <a
+                href="assets/imgs/feature-image-jle.svg"
+                data-sub-html="Contextual Guidance within JupyterLab"
+              >
+                <img
+                  alt="Contextual Guidance within JupyterLab"
+                  src="assets/imgs/feature-image-jle.svg"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="nbdocs-feature-description">
+            <p class="nbdocs-heading-2">Contextual Guidance within JupyterLab</p>
+            <p class="nbdocs-heading-4 text-grey-200">
+              With the NB Defense JupyterLab Extension, you can leverage rich contextual help to
+              identify problem areas within your Notebook. This feature
+              streamlines the security review process by pinpointing areas of
+              concern directly in-line within the notebook.
+            </p>
             <a
-              class="text-orange text-link effect-transition"
-              href="https://protectai.com"
-              title="Protect AI"
-              target="_blank"
-            >
-              Protect AI
-            </a>
-            is committed to developing and promoting tools that help the ML community 
-            adopt best security practices practices. As part of this commitment,
-            we have open sourced
-            <a
-              class="text-orange text-link effect-transition"
+              class="nbdocs-heading-4 learn-more effect-transition text-orange"
               href="{{ page.next_page.url | url }}"
               title="{{ page.next_page.title | e }}"
             >
-              NB Defense
+              Learn more {% include "assets/imgs/branch-bottom.svg" %}
             </a>
-            under Apache 2.0 license. We believe that by working together, we can
-            create a safer and more secure environment for all users of ML systems.
-          </p>
-          <p class="nbdocs-heading-4 text-grey-200">
-            We welcome contributions to NB Defense as Pull Requests and GitHub Issues.
-          </p>
-          <p class="nbdocs-heading-4 text-grey-200">
-            We invite you to join our
-            <a
-              class="text-orange text-link effect-transition"
-              href="https://mlsecops.slack.com/"
-              target="_blank"
-            >
-              MLSecOps Slack
-            </a>
-            community where you can hear from experts in the field, discuss, and
-            collaborate.
-          </p>
+          </div>
         </div>
-        <!-- Get Started -->
-        <div class="nbdoc-buttons">
+        <!-- Advanced Repository Scanning -->
+        <div class="nbdocs-feature-item">
+          <div class="nbdocs-feature-item-image">
+            <div class="lightgallery">
+              <a
+                href="assets/imgs/feature-image-repository-scan.svg"
+                data-sub-html="Advanced Repository Scanning"
+              >
+                <img
+                  alt="Advanced Repository Scanning"
+                  src="assets/imgs/feature-image-repository-scan.svg"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="nbdocs-feature-description">
+            <p class="nbdocs-heading-2">Advanced Repository Scanning</p>
+            <p class="nbdocs-heading-4 text-grey-200">
+              The NB Defense CLI is designed to facilitate scanning of an entire
+              Git Repo or folders containing notebooks, enabling you to
+              leverage NB Defense's entire security capabilities outside of Jupyter environment. <br/>
+              The CLI tool can be inserted into
+              Continuous Integration (CI) systems as a pre-commit hook, ensuring a
+              streamlined development process.
+            </p>
+            <a
+              class="nbdocs-heading-4 learn-more effect-transition text-orange"
+              href="{{ page.next_page.url | url }}"
+              title="{{ page.next_page.title | e }}"
+            >
+              Learn more {% include "assets/imgs/branch-bottom.svg" %}
+            </a>
+          </div>
+        </div>
+        <!-- CVE Identification -->
+        <div class="nbdocs-feature-item">
+          <div class="nbdocs-feature-item-image">
+            <div class="lightgallery">
+              <a
+                href="assets/imgs/feature-image-cve.svg"
+                data-sub-html="CVE Identification"
+              >
+                <img
+                  alt="CVE Identification"
+                  src="assets/imgs/feature-image-cve.svg"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="nbdocs-feature-description">
+            <p class="nbdocs-heading-2">CVE Identification</p>
+            <p class="nbdocs-heading-4 text-grey-200">
+              Within the JupyterLab Extension, there is an innovative CVE scanner (first to market)
+              which looks for code dependencies that are currently being imported by your
+              Notebook and installed in your Python Kernel. This provides you with
+              a lens on potential security risks that may be imported into your notebooks.
+            </p>
+            <a
+              class="nbdocs-heading-4 learn-more effect-transition text-orange"
+              href="{{ page.next_page.url | url }}"
+              title="{{ page.next_page.title | e }}"
+            >
+              Learn more {% include "assets/imgs/branch-bottom.svg" %}
+            </a>
+          </div>
+        </div>
+        <!-- Customizable Scanning Options -->
+        <div class="nbdocs-feature-item">
+          <div class="nbdocs-feature-item-image">
+            <div class="lightgallery">
+              <a
+                href="assets/imgs/feature-image-customizable.svg"
+                data-sub-html="Customizable Scanning Options"
+              >
+                <img
+                  alt="Customizable Scanning Options"
+                  src="assets/imgs/feature-image-customizable.svg"
+                />
+              </a>
+            </div>
+          </div>
+          <div class="nbdocs-feature-description">
+            <p class="nbdocs-heading-2">Customizable Scanning Options</p>
+            <p class="nbdocs-heading-4 text-grey-200">
+              The JupyterLab Extension and CLI can both be easily configured to scan for specific
+              types of secrets, PII, and third-party licenses. This allows you to
+              set the appropriate sensitivity of the scan and tailor the security
+              review process to your specific needs.
+            </p>
+            <a
+              class="nbdocs-heading-4 learn-more effect-transition text-orange"
+              href="{{ page.next_page.url | url }}"
+              title="{{ page.next_page.title | e }}"
+            >
+              Learn more {% include "assets/imgs/branch-bottom.svg" %}
+            </a>
+          </div>
+        </div>
+      </div>
+      <!-- Circle Arrow Long -->
+      <div class="nbdocs-circle-arrow">
+        <img src="assets/imgs/circle-arrow.svg" alt="" draggable="false" />
+      </div>
+    </div>
+
+    <!-- Section 3 - Community -->
+    <div class="nbdocs-section-3">
+      <p class="nbdocs-heading-1 section-title text-white">
+        Protect AI and the MLSecOps Community
+      </p>
+      <div class="text-content">
+        <p class="nbdocs-heading-4 text-grey-200">
           <a
+            class="text-orange text-link effect-transition"
+            href="https://protectai.com"
+            title="Protect AI"
+            target="_blank"
+          >
+            Protect AI
+          </a>
+          is committed to developing and promoting tools that help the ML community 
+          adopt best security practices practices. As part of this commitment,
+          we have open sourced
+          <a
+            class="text-orange text-link effect-transition"
             href="{{ page.next_page.url | url }}"
             title="{{ page.next_page.title | e }}"
-            class="primary-button effect-transition"
           >
-            Get Started
+            NB Defense
           </a>
-        </div>
+          under Apache 2.0 license. We believe that by working together, we can
+          create a safer and more secure environment for all users of ML systems.
+        </p>
+        <p class="nbdocs-heading-4 text-grey-200">
+          We welcome contributions to NB Defense as Pull Requests and GitHub Issues.
+        </p>
+        <p class="nbdocs-heading-4 text-grey-200">
+          We invite you to join our
+          <a
+            class="text-orange text-link effect-transition"
+            href="https://mlsecops.slack.com/"
+            target="_blank"
+          >
+            MLSecOps Slack
+          </a>
+          community where you can hear from experts in the field, discuss, and
+          collaborate.
+        </p>
       </div>
+      <!-- Get Started -->
+      <div class="nbdoc-buttons">
+        <a
+          href="{{ page.next_page.url | url }}"
+          title="{{ page.next_page.title | e }}"
+          class="primary-button effect-transition"
+        >
+          Get Started
+        </a>
+      </div>
+    </div>
 
-      <!-- Footer -->
-      <div class="nbdocs-section-footer">
-        <!-- Footer Copyright -->
-        <div class="footer-copyright">
-          <p class="copyright-text">Copyright &copy; 2023</p>
-          <a 
-            href="https://protectai.com" 
-            target="_blank" 
-            class="copyright-logo effect-transition"
-          >
-            {% include "assets/imgs/footer-logo.svg" %}
+    <!-- Footer -->
+    <div class="nbdocs-section-footer">
+      <!-- Footer Copyright -->
+      <div class="footer-copyright">
+        <p class="copyright-text">Copyright &copy; 2023</p>
+        <a 
+          href="https://protectai.com" 
+          target="_blank" 
+          class="copyright-logo effect-transition"
+        >
+          {% include "assets/imgs/footer-logo.svg" %}
+        </a>
+      </div>
+      <!-- Social icon group -->
+      <div class="social-icons">
+        <!-- GitHub -->
+        <div class="social-icon effect-transition">
+          <a href="https://github.com/protectai/nbdefense" target="_blank">
+            {% include ".icons/social-github.svg" %}
           </a>
         </div>
-        <!-- Social icon group -->
-        <div class="social-icons">
-          <!-- GitHub -->
-          <div class="social-icon effect-transition">
-            <a href="https://github.com/protectai/nbdefense" target="_blank">
-              {% include ".icons/social-github.svg" %}
-            </a>
-          </div>
-          <!-- LinkedIn -->
-          <div class="social-icon effect-transition">
-            <a href="https://www.linkedin.com/company/protect-ai/" target="_blank">
-              {% include ".icons/social-linkedin.svg" %}
-            </a>
-          </div>
-          <!-- Slack -->
-          <div class="social-icon effect-transition">
-            <a href="https://mlsecops.slack.com/" target="_blank">
-              {% include ".icons/social-slack.svg" %}
-            </a>
-          </div>
-          <!-- Discussion -->
-          <div class="social-icon effect-transition">
-            <a
-              href="https://github.com/protectai/nbdefense/discussions"
-              target="_blank"
-            >
-              {% include ".icons/social-discussion.svg" %}
-            </a>
-          </div>
+        <!-- LinkedIn -->
+        <div class="social-icon effect-transition">
+          <a href="https://www.linkedin.com/company/protect-ai/" target="_blank">
+            {% include ".icons/social-linkedin.svg" %}
+          </a>
+        </div>
+        <!-- Slack -->
+        <div class="social-icon effect-transition">
+          <a href="https://mlsecops.slack.com/" target="_blank">
+            {% include ".icons/social-slack.svg" %}
+          </a>
+        </div>
+        <!-- Discussion -->
+        <div class="social-icon effect-transition">
+          <a
+            href="https://github.com/protectai/nbdefense/discussions"
+            target="_blank"
+          >
+            {% include ".icons/social-discussion.svg" %}
+          </a>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 {% endblock %}
 <!-- Hide default navbar and footer -->
 {% block content %}

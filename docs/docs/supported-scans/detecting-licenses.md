@@ -2,9 +2,9 @@
 
 NB Defense scans for common vulnerabilities and exposures (CVEs) associated with the dependencies in your project's `requirements.txt` file and your python environment. We evaluate your dependencies for licenses that are not included in your list of accepted licenses.
 
-## License Detection with the Jupyter Lab Extension (JLE)
+## License Detection with the JupyterLab Extension (JLE)
 
-The NB Defense Jupyter Lab Extension tracks your notebooks currently configured kernel to scan imported third party dependencies for licenses.
+The NB Defense JupyterLab Extension tracks your notebooks currently configured kernel to scan imported third party dependencies for licenses.
 
 !!! warning
 
@@ -14,7 +14,7 @@ Before scanning, verify that the kernel in the NB Defense panel matches the kern
 
 ### JLE Settings
 
-You can configure your list of accepted licenses, and license source in the [Jupyter Lab Extensions settings](/scan-settings/jupyterlab-settings). Configure accepted licenses to include all licenses that are acceptable to your project's standards. Configure the license source to determine where NB Defense will look for license data associated with your package (local kernel, pypi, or a combination of the two).
+You can configure your list of accepted licenses, and license source in the [JupyterLab extensions settings](../scan-settings/jupyterlab-settings.md). Configure accepted licenses to include all licenses that are acceptable to your project's standards. Configure the license source to determine where NB Defense will look for license data associated with your package (local kernel, pypi, or a combination of the two).
 
 ### JLE Scan Results
 
@@ -22,7 +22,7 @@ The example below shows that an unapproved license has been found in the `matplo
 
 |                 ![](images/nbd-jle-license-results.png)                  |
 | :----------------------------------------------------------------------: |
-| _NBDefense Jupyter Lab Extension (JLE) scan report with licenses found._ |
+| _NBDefense JupyterLab Extension (JLE) scan report with licenses found._ |
 
 ## License Detection with the CLI
 
@@ -30,7 +30,7 @@ The NBDefense CLI currently supports scanning for licenses using a python `requi
 
 ### CLI Settings
 
-Using your [settings.toml file](/scan-settings/cli-settings) you can configure the list of licenses to include licenses that are acceptable to your projects standards.
+Using your [settings.toml file](../scan-settings/cli-settings.md) you can configure the list of licenses to include licenses that are acceptable to your projects standards.
 
 !!! note "Example Settings"
 

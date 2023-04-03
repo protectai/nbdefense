@@ -52,8 +52,8 @@ nav:
       - "JupyterLab Extension Settings": "scan-settings/jupyterlab-settings.md"
       - "CLI Settings": "scan-settings/cli-settings.md"
       - "CLI Flags": "scan-settings/cli-flags.md"
-  - "Have An Issue?": 
-    - "Have An Issue?": "have-an-issue.md"
+  - "FAQ": 
+    - "FAQ": "faq.md"
   - "About Us": "about-us.md"
 
 markdown_extensions:

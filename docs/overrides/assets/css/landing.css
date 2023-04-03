@@ -51,7 +51,7 @@
   color: #3f3f3f;
 }
 .text-grey-200 {
-  color: #dfdfdf;
+  color: #e9ebfc;
 }
 .text-orange {
   color: #fe9a2d;
@@ -348,7 +348,10 @@
 }
 
 /* Hide md-main for landing page and md-tab */
-.nbdocs-container + .md-main {
+.md-container .md-main {
+  height: 0px;
+}
+.md-container .md-main .md-main__inner .md-content{
   display: none;
 }
 

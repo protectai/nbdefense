@@ -70,7 +70,7 @@ Below is a sample result for JLE with PII found in ```notebook_2.ipynb```
 
 | ![](images/nbd-jle-scan-pii-found.png) |
 | :--: |
-| *NB Defense Jupyter Lab Extension (JLE) scan report with Personally Identifiable Information (PII) found.* |
+| *NB Defense JupyterLab Extension (JLE) scan report with Personally Identifiable Information (PII) found.* |
 
 For any PII found in the notebook, the scan flags it as a HIGH severity issue, and also includes the cell number where it is found. 
 

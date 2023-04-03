@@ -1,4 +1,4 @@
-The settings for the JupyterLab extension can be found in the JupyterLab Advanced Settings Editor alongside the settings for other JupyterLab extensions.
+The settings for the JupyterLab Extension can be found in the JupyterLab Advanced Settings Editor alongside the settings for other JupyterLab extensions.
 
 You can open the JupyterLab settings pane by clicking on the Settings tab in the menu bar, then clicking on the Advanced Settings Editor button.
 

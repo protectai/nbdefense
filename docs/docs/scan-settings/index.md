@@ -4,7 +4,7 @@ description: This section covers how to configure the settings for NBDefense.
 
 # Scan Settings
 
-Settings for scans can be adjusted for both the [JupyterLab extension](/scan-settings/jupyterlab-settings/) and the [CLI](/scan-settings/cli-settings/).
+Settings for scans can be adjusted for both the [JupyterLab Extension](./jupyterlab-settings.md) and the [CLI](./cli-settings.md).
 
 ## Adjustable Settings
 
@@ -30,7 +30,7 @@ The `redact_secret` setting determines how sensitive information is presented in
 
 The `secrets_plugins` has the same modules as in the [detect-secrets](https://github.com/Yelp/detect-secrets) package. Each of the secret modules can be enable or disabled.
 
-More details on which of the secret modules are enabled by default, and what they detect can be found on the [secrets scan details page](/supported-scans/detecting-secrets/#supported-detect-secrets-plugins).
+More details on which of the secret modules are enabled by default, and what they detect can be found on the [secrets scan details page](../supported-scans/detecting-secrets.md#supported-detect-secrets-plugins).
 
 ### PII Plugin Settings
 
@@ -42,7 +42,7 @@ Also, NB Defense PII scan allows for separate setting of `confidence_threshold` 
 
 #### `entities`
 
-The PII entities to be scanned for can be toggled on and off in the scan settings. A list of PII entities with their brief description can be found on the [PII scan details page](/supported-scans/detecting-PII/).
+The PII entities to be scanned for can be toggled on and off in the scan settings. A list of PII entities with their brief description can be found on the [PII scan details page](../supported-scans/detecting-PII.md).
 
 ### License Plugin Settings
 

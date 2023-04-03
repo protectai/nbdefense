@@ -2,9 +2,9 @@
 
 NB Defense scans for common vulnerabilities and exposures (CVEs) associated with the dependencies in your project's `requirements.txt` file and your python environment. We evaluate your dependencies with Aqua's [Trivy](https://github.com/aquasecurity/trivy) tool to detect any known vulnerabilities.
 
-## CVE Detection with the Jupyter Lab Extension (JLE)
+## CVE Detection with the JupyterLab Extension (JLE)
 
-The NB Defense Jupyter Lab Extension tracks your notebooks currently configured kernel to scan imported third party dependencies for CVEs.
+The NB Defense JupyterLab Extension tracks your notebooks currently configured kernel to scan imported third party dependencies for CVEs.
 
 !!! warning
 
@@ -14,7 +14,7 @@ Before scanning, verify that the kernel in the NB Defense panel matches the kern
 
 ### JLE Settings
 
-You can enable or disable cve scanning in the [Jupyter Lab Extensions settings](/scan-settings/jupyterlab-settings).
+You can enable or disable cve scanning in the [JupyterLab extensions settings](../scan-settings/jupyterlab-settings.md).
 
 ### JLE Scan Results
 
@@ -22,7 +22,7 @@ Once a scan completes, any imported modules with associated CVEs will be added t
 
 |                 ![](images/nbd-jle-cve-results.png)                  |
 | :------------------------------------------------------------------: |
-| _NBDefense Jupyter Lab Extension (JLE) scan report with CVEs found._ |
+| _NBDefense JupyterLab Extension (JLE) scan report with CVEs found._ |
 
 ## CVE Detection with the CLI
 
@@ -30,7 +30,7 @@ The NBDefense CLI currently supports scanning for CVEs with a python `requiremen
 
 ### CLI Settings
 
-Using your [settings.toml file](/scan-settings/cli-settings) you can enable or disable the CVE plugin.
+Using your [settings.toml file](../scan-settings/cli-settings.md) you can enable or disable the CVE plugin.
 
 !!! note "Example Settings"
 

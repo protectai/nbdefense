@@ -2,7 +2,7 @@
 
 !!! info "Running NB Defense on JupyterLab in the cloud"
 
-    The following instructions are for a local installation of JupyterLab. If you are interested in running the JupyterLab extension on a cloud platform, please visit the [JupyterLab Extension on Cloud Services](/getting-started/cloud-services/) page for instructions for each platform.
+    The following instructions are for a local installation of JupyterLab. If you are interested in running the JupyterLab Extension on a cloud platform, please visit the [JupyterLab Extension on Cloud Services](./cloud-services/index.md) page for instructions for each platform.
 
 1.  Activate the Python environment that you use to run JupyterLab.
 
@@ -47,7 +47,7 @@
 
 Once the extension has been installed, you can now start scanning your notebooks within the JupyterLab environment.
 
-Installing the NB Defense Jupyter Lab Extension (JLE) will add a tab with an NB icon to your side bar. Clicking this will take you to the NB Defense JLE panel. From there you can run a scan or view scan results for the currently focused notebook.
+Installing the NB Defense JupyterLab Extension (JLE) will add a tab with an NB icon to your side bar. Clicking this will take you to the NB Defense JLE panel. From there you can run a scan or view scan results for the currently focused notebook.
 
 <video autoplay loop muted src="/imgs/open-nb-defense-panel.mp4">
     Open NB Defense panel video
@@ -73,4 +73,4 @@ Clicking on one of the issues here will focus the relevant cell. From here you c
 
 ## Adjusting Scan Settings
 
-You can change and update settings for your scan from the JupyterLab settings menu. More info is available on the [Scan Settings](/scan-settings/) page.
+You can change and update settings for your scan from the JupyterLab settings menu. More info is available on the [Scan Settings](../scan-settings/index.md) page.

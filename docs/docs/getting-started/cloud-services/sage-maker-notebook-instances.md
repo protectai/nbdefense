@@ -30,7 +30,7 @@ description: This section covers the installation of NB Defense on SageMaker Not
 
     This is where you want to install the NB Defense JLE.
 
-5.  Install the extension with pip (please ensure to replace your license key with {LICENSE_KEY} or get your pre-filled link from the [NB Defense web portal](https://nbdefense.protectai.com/)):
+5.  Install the extension with pip:
 
     ```bash
     pip install nbdefense_jupyter 

@@ -95,11 +95,11 @@ Options:
   --help               Show this message and exit.
 ```
 
-This will create a `settings.toml` file which allows you to change certain scan settings. More information about NB Defense scan settings can be found on the [Scan Settings page](/scan-settings/).
+This will create a `settings.toml` file which allows you to change certain scan settings. More information about NB Defense scan settings can be found on the [Scan Settings page](../scan-settings/index.md).
 
 ## Interpreting Scan Results
 
-Scan results can be generated as either HTML or JSON. The HTML results will be more human readable and can be served using the `--serve` flag, where the JSON results are better for parsing with machine output. The JSON reports are used to generate the HTML report and the scan results screen of the Jupyter Lab Extension.
+Scan results can be generated as either HTML or JSON. The HTML results will be more human readable and can be served using the `--serve` flag, where the JSON results are better for parsing with machine output. The JSON reports are used to generate the HTML report and the scan results screen of the JupyterLab Extension.
 
 ### The HTML Report
 
@@ -487,4 +487,4 @@ A list of the errors that occurred during the scan. This element will only be in
 
 ## Adjusting Scan Settings
 
-You can change and update settings for your scan from a `settings.toml` file. More info is available on the [Scan Settings](/scan-settings) page.
+You can change and update settings for your scan from a `settings.toml` file. More info is available on the [Scan Settings](../scan-settings/index.md) page.
