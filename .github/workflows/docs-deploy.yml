@@ -12,6 +12,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0 # Necessary to get tags
       - uses: actions/setup-python@v2
         with:
           python-version: "3.8"
@@ -34,4 +36,4 @@ jobs:
       - name: Deploy to Github
         run: |
           cd docs
-          poetry run mkdocs gh-deploy --force
+          poetry run mkdocs gh-deploy
