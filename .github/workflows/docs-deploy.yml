@@ -5,6 +5,8 @@ on:
       - docs/**
     branches:
       - main
+  pull_request:
+    branches: '*'
 permissions:
   contents: write
 jobs:
