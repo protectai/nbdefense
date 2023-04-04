@@ -145,3 +145,21 @@ html .md-footer-meta.md-typeset a:is(:focus, :hover) {
   border: 1px solid #138bff;
   color: #138bff;
 }
+
+/* Git commit information */
+.md-source-file {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.md-source-file__fact {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.md-source-file__fact .md-icon {
+  min-width: 24px;
+  min-height: 24px;
+}

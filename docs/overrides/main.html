@@ -22,3 +22,7 @@
     }
   </script>
 {% endblock %}
+{% block article %} 
+  {{ super() }} 
+  {% include "partials/content.html" %}
+{% endblock %}

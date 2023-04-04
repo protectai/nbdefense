@@ -75,6 +75,10 @@ plugins:
       enable_checks: false
       min_length: 10
       max_length: 160
+  - git-revision-date-localized:
+      enable_creation_date: true
+  - git-authors:
+      sort_authors_by: contribution
 
 extra:
   social:
@@ -87,3 +91,7 @@ extra:
     - icon: social-discussion
       link: https://github.com/protectai/nbdefense/discussions
   generator: false
+
+extra_javascript:
+  - assets/js/timeago.min.js
+  - assets/js/timeago_mkdocs_material.js
