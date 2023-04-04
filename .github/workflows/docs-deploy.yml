@@ -19,7 +19,8 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install -r docs/requirements.txt
+      - name: Install Requirements
+        run: pip install -r docs/requirements.txt
       - name: Deploy to Github
         run: |
           cd docs
