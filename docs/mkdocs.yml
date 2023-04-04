@@ -33,28 +33,28 @@ extra_css:
 nav:
   - Home: "index.md"
   - "Getting Started":
-  #   - "getting-started/index.md"
-  #   - "CLI": "getting-started/cli.md"
-  #   - "JupyterLab Extension": "getting-started/jupyter-lab-extension.md"
-  #   - "JupyterLab Extension on Cloud Services":
-  #       - "getting-started/cloud-services/index.md"
-  #       - "SageMaker Notebook Instances": "getting-started/cloud-services/sage-maker-notebook-instances.md"
-  #       - "Sage Maker Studio Lab": "getting-started/cloud-services/sage-maker-studio-lab.md"
-  #       - "Azure ML Notebooks": "getting-started/cloud-services/azure-ml-notebooks.md"
-  #       - "SageMaker Studio - COMING SOON": "getting-started/cloud-services/sage-maker-studio.md"
-  # - "Supported Scans":
-  #     - "Secrets Detection": "supported-scans/detecting-secrets.md"
-  #     - "PII Detection": "supported-scans/detecting-PII.md"
-  #     - "CVE Detection": "supported-scans/detecting-CVEs.md"
-  #     - "License Detection": "supported-scans/detecting-licenses.md"
-  # - "Scan Settings":
-  #     - "scan-settings/index.md"
-  #     - "JupyterLab Extension Settings": "scan-settings/jupyterlab-settings.md"
-  #     - "CLI Settings": "scan-settings/cli-settings.md"
-  #     - "CLI Flags": "scan-settings/cli-flags.md"
-  # - "FAQ": 
-  #   - "FAQ": "faq.md"
-  # - "About Us": "about-us.md"
+    - "getting-started/index.md"
+    - "CLI": "getting-started/cli.md"
+    - "JupyterLab Extension": "getting-started/jupyter-lab-extension.md"
+    - "JupyterLab Extension on Cloud Services":
+        - "getting-started/cloud-services/index.md"
+        - "SageMaker Notebook Instances": "getting-started/cloud-services/sage-maker-notebook-instances.md"
+        - "Sage Maker Studio Lab": "getting-started/cloud-services/sage-maker-studio-lab.md"
+        - "Azure ML Notebooks": "getting-started/cloud-services/azure-ml-notebooks.md"
+        - "SageMaker Studio - COMING SOON": "getting-started/cloud-services/sage-maker-studio.md"
+  - "Supported Scans":
+      - "Secrets Detection": "supported-scans/detecting-secrets.md"
+      - "PII Detection": "supported-scans/detecting-PII.md"
+      - "CVE Detection": "supported-scans/detecting-CVEs.md"
+      - "License Detection": "supported-scans/detecting-licenses.md"
+  - "Scan Settings":
+      - "scan-settings/index.md"
+      - "JupyterLab Extension Settings": "scan-settings/jupyterlab-settings.md"
+      - "CLI Settings": "scan-settings/cli-settings.md"
+      - "CLI Flags": "scan-settings/cli-flags.md"
+  - "FAQ": 
+    - "FAQ": "faq.md"
+  - "About Us": "about-us.md"
 
 markdown_extensions:
   - pymdownx.highlight:
