@@ -1006,7 +1006,7 @@
 </li>
 <li>
 <p>When the terminal is open, type the following command to view all conda environments present on the sagemaker instance:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda info --envs
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>conda<span class="w"> </span>info<span class="w"> </span>--envs
 </code></pre></div>
 </li>
 <li>
@@ -1017,25 +1017,25 @@
 </li>
 <li>
 <p>Install the extension with pip:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install nbdefense_jupyter 
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip<span class="w"> </span>install<span class="w"> </span>nbdefense_jupyter<span class="w"> </span>
 </code></pre></div>
 </li>
 <li>
 <p>After the installation is complete, type the following into the terminal:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>jupyter server extension <span class="nb">enable</span> nbdefense_jupyter
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>jupyter<span class="w"> </span>server<span class="w"> </span>extension<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nbdefense_jupyter
 </code></pre></div>
 </li>
 <li>
 <p>Now that we have installed and enabled the JLE we simply need to restart the Jupyter Server with the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo systemctl restart jupyter-server
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>jupyter-server
 </code></pre></div>
 <p>The above command will cause you to lose connection to your terminal. The terminal window will automatically close - this is expected behavior due to the Jupyter Server restarting.</p>
 <p>You will be taken back to the main page of the Sagemaker JupyterLab UI.</p>
 </li>
 <li>
 <p>To confirm that installation was succesful, open a new terminal and run the following commands:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>jupyter labextension list <span class="c1"># view installed extensions on the client</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>jupyter server extension list <span class="c1"># view installed extensions on the server</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>jupyter<span class="w"> </span>labextension<span class="w"> </span>list<span class="w"> </span><span class="c1"># view installed extensions on the client</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>jupyter<span class="w"> </span>server<span class="w"> </span>extension<span class="w"> </span>list<span class="w"> </span><span class="c1"># view installed extensions on the server</span>
 </code></pre></div>
 <p>You should see something like the following (notice how <code>nbdefense_jupyter</code> is present in both lists):</p>
 <p><img alt="sm_notebook_4" src="../images/sm-notebook-4.png" /></p>
@@ -1056,7 +1056,7 @@
 <p>For the JLE you will need to provide an <code>on-start.sh</code> script as a lifecycle policy. Below is a version of the <code>on-start.sh</code> script that installs the JLE:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="ch">#!/bin/bash</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>
-<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">set</span> -e
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nb">set</span><span class="w"> </span>-e
 <a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>
 <a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="c1"># OVERVIEW</span>
 <a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="c1"># This script installs a custom, persistent installation of conda on the Notebook Instance&#39;s EBS volume, and ensures that these custom environments are available as kernels in Jupyter.</span>
@@ -1066,7 +1066,7 @@
 <a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># For another example, see:</span>
 <a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="c1"># https://docs.aws.amazon.com/sagemaker/latest/dg/nbi-add-external.html#nbi-isolated-environment</span>
 <a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>
-<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>sudo -u ec2-user -i <span class="s">&lt;&lt;&#39;EOF&#39;</span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>sudo<span class="w"> </span>-u<span class="w"> </span>ec2-user<span class="w"> </span>-i<span class="w"> </span><span class="s">&lt;&lt;&#39;EOF&#39;</span>
 <a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="s">unset SUDO_UID</span>
 <a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>
 <a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a><span class="s">source /home/ec2-user/anaconda3/bin/activate JupyterSystemEnv</span>
@@ -1083,15 +1083,15 @@
 <a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a><span class="s"># rm /home/ec2-user/.condarc</span>
 <a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a><span class="s">EOF</span>
 <a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>
-<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="nb">echo</span> <span class="s2">&quot;Restarting the Jupyter server..&quot;</span>
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Restarting the Jupyter server..&quot;</span>
 <a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a><span class="c1"># restart command is dependent on current running Amazon Linux and JupyterLab</span>
-<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="nv">CURR_VERSION_AL</span><span class="o">=</span><span class="k">$(</span>cat /etc/system-release<span class="k">)</span>
-<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="nv">CURR_VERSION_JS</span><span class="o">=</span><span class="k">$(</span>jupyter --version<span class="k">)</span>
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a><span class="nv">CURR_VERSION_AL</span><span class="o">=</span><span class="k">$(</span>cat<span class="w"> </span>/etc/system-release<span class="k">)</span>
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a><span class="nv">CURR_VERSION_JS</span><span class="o">=</span><span class="k">$(</span>jupyter<span class="w"> </span>--version<span class="k">)</span>
 <a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>
-<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="k">if</span> <span class="o">[[</span> <span class="nv">$CURR_VERSION_JS</span> <span class="o">==</span> *<span class="s2">$&quot;jupyter_core     : 4.9.1&quot;</span>* <span class="o">]]</span> <span class="o">&amp;&amp;</span> <span class="o">[[</span> <span class="nv">$CURR_VERSION_AL</span> <span class="o">==</span> *<span class="s2">$&quot; release 2018&quot;</span>* <span class="o">]]</span><span class="p">;</span> <span class="k">then</span>
-<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>    sudo initctl restart jupyter-server --no-wait
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a><span class="k">if</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$CURR_VERSION_JS</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">$&quot;jupyter_core     : 4.9.1&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="o">[[</span><span class="w"> </span><span class="nv">$CURR_VERSION_AL</span><span class="w"> </span><span class="o">==</span><span class="w"> </span>*<span class="s2">$&quot; release 2018&quot;</span>*<span class="w"> </span><span class="o">]]</span><span class="p">;</span><span class="w"> </span><span class="k">then</span>
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a><span class="w">    </span>sudo<span class="w"> </span>initctl<span class="w"> </span>restart<span class="w"> </span>jupyter-server<span class="w"> </span>--no-wait
 <a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a><span class="k">else</span>
-<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>    sudo systemctl --no-block restart jupyter-server.service
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a><span class="w">    </span>sudo<span class="w"> </span>systemctl<span class="w"> </span>--no-block<span class="w"> </span>restart<span class="w"> </span>jupyter-server.service
 <a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a><span class="k">fi</span>
 </code></pre></div>
 <p>The above script can be customized to alter the name of the custom environment as well as the directory created that hosts the environment. This script does the following:</p>
@@ -1134,7 +1134,7 @@
 <a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>ModuleNotFoundError: No module named &#39;jsonschema.protocols&#39;
 </code></pre></div>
 <p><strong>One way to get around this issue is to install a <code>jsonschema</code> version greater than 4.0.0 using:</strong></p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip install <span class="s2">&quot;jsonschema&gt;4&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>pip<span class="w"> </span>install<span class="w"> </span><span class="s2">&quot;jsonschema&gt;4&quot;</span>
 </code></pre></div>
 <p>If you are still having trouble installing the JLE on SageMaker Notebook, please feel free to reach out to us at <a href="mailto:support@protectai.com">support@protectai.com</a>.</p>
 
