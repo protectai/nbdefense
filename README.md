@@ -33,4 +33,4 @@ For more details and [documentation](https://nbdefense.ai) visit these links:
 
 Welcome to the team! We are open to contributions and working with the community to make notebooks safer for everyone.
 
-If you would like to contribute, please visit [CONTRIBUTING.md](https://github.com/protectai/nbdefense/blob/main/CONTRIBUTING.md) to get started as a developer, or to suggest bug fixes, improvements, or new features follow [this link](https://nbdefense.ai/faq) to our FAQ pag.
+If you would like to contribute, please visit [CONTRIBUTING.md](https://github.com/protectai/nbdefense/blob/main/CONTRIBUTING.md) to get started as a developer, or to suggest bug fixes, improvements, or new features follow [this link](https://nbdefense.ai/faq) to our FAQ page.
