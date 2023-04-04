@@ -1,8 +1,11 @@
-install-dev:
-	pip install -r requirements.txt
+install:
+	poetry install
 
 start-dev:
 	mkdocs serve --dirtyreload
 
-build-prod:
+build:
 	mkdocs build
+
+deploy:
+	mkdocs gh-deploy --force
