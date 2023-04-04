@@ -6,6 +6,3 @@ start-dev:
 
 build:
 	mkdocs build
-
-deploy:
-	mkdocs gh-deploy --force
