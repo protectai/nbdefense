@@ -23,5 +23,4 @@ jobs:
       - name: Deploy to Github
         run: |
           cd docs
-          mkdocs deploy
           mkdocs gh-deploy --force
