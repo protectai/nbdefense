@@ -12,16 +12,17 @@ from tests.default_settings import DEFAULT_SETTINGS
 
 class TestLicenseDependencyFilePlugin:
     @pytest.fixture
-    def codebase(self, tmp_path: Path) -> Codebase:
+    def codebase(
+        self, tmp_path: Path, create_license_requirements_file_path: Path
+    ) -> Codebase:
+        print(create_license_requirements_file_path)
         return Codebase(
             Path("./tests/plugin_tests/licenses/mock_files"),
             False,
             True,
             False,
             tmp_path,
-            requirements_file=Path(
-                "./tests/plugin_tests/licenses/mock_files/requirements.txt"
-            ),
+            requirements_file=create_license_requirements_file_path,
         )
 
     def test_scan(
@@ -30,6 +31,7 @@ class TestLicenseDependencyFilePlugin:
         mock_fetch_licenses_from_dist_info_path: Dict[str, List[str]],
         mock_fetch_license_data_from_pypi: Dict[str, List[str]],
         codebase: Codebase,
+        create_license_requirements_file_path: Path,
     ) -> None:
         unapproved_licenses = ["BAD_LICENSE_1", "BAD_LICENSE_2"]
         mock_fetch_license_data_from_pypi["licenses"].append(unapproved_licenses[0])
@@ -41,10 +43,10 @@ class TestLicenseDependencyFilePlugin:
                 settings=DEFAULT_SETTINGS,
             ),
         )
-        self.verify_scan_results(codebase)
+        self.verify_scan_results(codebase, create_license_requirements_file_path)
 
     @staticmethod
-    def verify_scan_results(codebase: Codebase) -> None:
+    def verify_scan_results(codebase: Codebase, requirements_file_path: Path) -> None:
         issues = codebase.issues.to_json()
         assert len(issues) == 8
         for package_name_index in range(1, 5):
@@ -74,6 +76,6 @@ class TestLicenseDependencyFilePlugin:
                         "package_name": package_name,
                         "package_version": package_version,
                         "unapproved_license": f"BAD_LICENSE_{package_index+1}",
-                        "file_path": "tests/plugin_tests/licenses/mock_files/requirements.txt",
+                        "file_path": str(requirements_file_path),
                     },
                 } in issues_filter_by_package_name

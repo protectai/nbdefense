@@ -8,6 +8,23 @@ from nbdefense.codebase import PackageInfo
 from nbdefense.plugins.licenses.license_plugin import LicenseCache, LicensePlugin
 
 
+@pytest.fixture(scope="session")
+def create_license_requirements_file_path() -> Path:
+    file_path = Path("license-test")
+    file_path.mkdir(parents=True, exist_ok=True)
+    file_path = file_path / "requirements.txt"
+    with open(file_path, "w") as f:
+        f.writelines(
+            [
+                "test_package_1==23.2.1\n",
+                "test_package_2==2.28.1\n",
+                "test_package_3==1.8.0\n",
+                "test_package_4==1.16.0",
+            ]
+        )
+    return file_path
+
+
 @pytest.fixture
 def mock_license_cache(monkeypatch: Any) -> None:
     def mock_init(self: Any, temp_directory: Path, filename: str) -> None:

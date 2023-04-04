@@ -7,6 +7,18 @@ from nbdefense.dependencies import DependencyInfo, ThirdPartyDependencies
 from nbdefense.plugins.cve.cve_plugin import CVEPlugin
 
 
+@pytest.fixture(scope="session")
+def create_cve_requirements_file_path() -> Path:
+    file_path = Path("cve-test")
+    file_path.mkdir(parents=True, exist_ok=True)
+    file_path = file_path / "requirements.txt"
+    with open(file_path, "w") as f:
+        f.writelines(
+            ["pytorch-lightning==1.5.10\n", "pandas==1.5.0\n", "matplotlibXtns==20.5\n"]
+        )
+    return file_path
+
+
 @pytest.fixture
 def mock_third_party_dependencies(monkeypatch: Any) -> None:
     dependencies = [
