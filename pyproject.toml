@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "nbdefense"
-description = "NB Defense CLI."
+description = "NB Defense CLI and SDK"
 version = "0.0.0"
 authors = ["ProtectAI <community@protectai.com>"]
 readme = "README.md"
