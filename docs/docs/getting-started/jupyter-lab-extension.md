@@ -63,7 +63,7 @@ You can also run a scan by clicking the `Scan with NB Defense` button in the not
 
 Within the side panel we display a list of issues detected during the scan. The information on the side bar includes the "Issue type", a short description of the issue, and which cell index the issue was found in.
 
-![Side panel with results](../../imgs/side-panel-with-results.png){: style="height:600px"}
+![Side panel with results](../imgs/side-panel-with-results.png){: style="height:600px"}
 
 Clicking on one of the issues here will focus the relevant cell. From here you can see that the characters that triggered the scan will be underlined in the editor. Additionally, all of the cells that contain issues will have a red background.
 
