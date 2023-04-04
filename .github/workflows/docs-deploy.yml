@@ -5,8 +5,6 @@ on:
       - docs/**
     branches:
       - main
-  pull_request:
-    branches: '*'
 permissions:
   contents: write
 jobs:
@@ -36,4 +34,4 @@ jobs:
       - name: Deploy to Github
         run: |
           cd docs
-          poetry run mkdocs gh-deploy
+          poetry run mkdocs gh-deploy --force
