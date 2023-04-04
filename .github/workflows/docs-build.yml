@@ -1,8 +1,12 @@
-name: Deploy Docs to Github Pages
+name: Build Docs
 on:
   push:
+    paths:
+      - docs/**
     branches:
       - main
+  pull_request:
+    branches: '*'
 permissions:
   contents: write
 jobs:
@@ -17,8 +21,9 @@ jobs:
         with:
           key: ${{ github.ref }}
           path: .cache
-      - run: pip install -r docs/requirements.txt
-      - name: Deploy to Github
+      - name: Install Requirements
+        run: pip install -r docs/requirements.txt
+      - name: Build
         run: |
           cd docs
-          mkdocs gh-deploy --force
+          mkdocs build
