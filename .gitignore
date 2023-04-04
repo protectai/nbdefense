@@ -173,3 +173,6 @@ nbdefense/trivy
 
 # settings files for scan
 settings.toml
+
+# Mkdocs build
+/docs/site
