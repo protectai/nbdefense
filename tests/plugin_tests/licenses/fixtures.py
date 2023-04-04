@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -10,10 +11,10 @@ from nbdefense.plugins.licenses.license_plugin import LicenseCache, LicensePlugi
 
 @pytest.fixture(scope="session")
 def create_license_requirements_file_path() -> Path:
-    file_path = Path("license-test")
-    file_path.mkdir(parents=True, exist_ok=True)
-    file_path = file_path / "requirements.txt"
-    with open(file_path, "w") as f:
+    current_directory = Path(os.path.dirname(os.path.realpath(__file__)))
+    requirements_directory = current_directory / "mock_files"
+    requirements_file_path = requirements_directory / "requirements.txt"
+    with open(requirements_file_path, "w") as f:
         f.writelines(
             [
                 "test_package_1==23.2.1\n",
@@ -22,7 +23,7 @@ def create_license_requirements_file_path() -> Path:
                 "test_package_4==1.16.0",
             ]
         )
-    return file_path
+    return requirements_file_path
 
 
 @pytest.fixture

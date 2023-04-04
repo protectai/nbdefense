@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Any
 
@@ -9,14 +10,14 @@ from nbdefense.plugins.cve.cve_plugin import CVEPlugin
 
 @pytest.fixture(scope="session")
 def create_cve_requirements_file_path() -> Path:
-    file_path = Path("cve-test")
-    file_path.mkdir(parents=True, exist_ok=True)
-    file_path = file_path / "requirements.txt"
-    with open(file_path, "w") as f:
+    current_directory = Path(os.path.dirname(os.path.realpath(__file__)))
+    requirements_directory = current_directory / "mock_files"
+    requirements_file_path = requirements_directory / "requirements.txt"
+    with open(requirements_file_path, "w") as f:
         f.writelines(
             ["pytorch-lightning==1.5.10\n", "pandas==1.5.0\n", "matplotlibXtns==20.5\n"]
         )
-    return file_path
+    return requirements_file_path
 
 
 @pytest.fixture
