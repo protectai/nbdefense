@@ -1,4 +1,0 @@
-test_package_1==23.2.1
-test_package_2==2.28.1
-test_package_3==1.8.0
-test_package_4==1.16.0
