@@ -27,21 +27,18 @@ theme:
   logo: assets/imgs/top-logo.svg
   favicon: assets/imgs/favicon.svg
 
-extra_css:
-  - assets/css/extra.css
-
 nav:
   - Home: "index.md"
   - "Getting Started":
-    - "getting-started/index.md"
-    - "CLI": "getting-started/cli.md"
-    - "JupyterLab Extension": "getting-started/jupyter-lab-extension.md"
-    - "JupyterLab Extension on Cloud Services":
-        - "getting-started/cloud-services/index.md"
-        - "SageMaker Notebook Instances": "getting-started/cloud-services/sage-maker-notebook-instances.md"
-        - "Sage Maker Studio Lab": "getting-started/cloud-services/sage-maker-studio-lab.md"
-        - "Azure ML Notebooks": "getting-started/cloud-services/azure-ml-notebooks.md"
-        - "SageMaker Studio - COMING SOON": "getting-started/cloud-services/sage-maker-studio.md"
+      - "getting-started/index.md"
+      - "CLI": "getting-started/cli.md"
+      - "JupyterLab Extension": "getting-started/jupyter-lab-extension.md"
+      - "JupyterLab Extension on Cloud Services":
+          - "getting-started/cloud-services/index.md"
+          - "SageMaker Notebook Instances": "getting-started/cloud-services/sage-maker-notebook-instances.md"
+          - "Sage Maker Studio Lab": "getting-started/cloud-services/sage-maker-studio-lab.md"
+          - "Azure ML Notebooks": "getting-started/cloud-services/azure-ml-notebooks.md"
+          - "SageMaker Studio - COMING SOON": "getting-started/cloud-services/sage-maker-studio.md"
   - "Supported Scans":
       - "Secrets Detection": "supported-scans/detecting-secrets.md"
       - "PII Detection": "supported-scans/detecting-PII.md"
@@ -52,8 +49,8 @@ nav:
       - "JupyterLab Extension Settings": "scan-settings/jupyterlab-settings.md"
       - "CLI Settings": "scan-settings/cli-settings.md"
       - "CLI Flags": "scan-settings/cli-flags.md"
-  - "FAQ": 
-    - "FAQ": "faq.md"
+  - "FAQ":
+      - "FAQ": "faq.md"
   - "About Us": "about-us.md"
 
 markdown_extensions:
@@ -93,5 +90,10 @@ extra:
   generator: false
 
 extra_javascript:
-  - assets/js/timeago.min.js
-  - assets/js/timeago_mkdocs_material.js
+  - https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js
+  - https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.1-beta.0/js/lightgallery.min.js
+  - assets/js/timeago_mkdocs.js
+  - assets/js/lightgallery_mkdocs.js
+
+extra_css:
+  - assets/css/extra.css
