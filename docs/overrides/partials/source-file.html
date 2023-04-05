@@ -1,0 +1,35 @@
+<aside class="md-source-file">
+  {% if page.meta.git_revision_date_localized_raw_date %}
+    <div class="md-source-file__fact">
+      <div class="md-icon" title="Last Update">
+        {% include "assets/imgs/git-updated.svg" %}
+      </div>
+      <span>
+        Last Updated:
+        <span class="timeago" datetime='{{page.meta.git_revision_date_localized_raw_date}}'></span>
+      </span>
+    </div>
+  {% endif %}
+  {% if page.meta.git_creation_date_localized_raw_date %}
+    <div class="md-source-file__fact">
+      <div class="md-icon" title="Created">
+        {% include "assets/imgs/git-created.svg" %}
+      </div>
+      <span>
+        Created:
+        <span class="timeago" datetime='{{page.meta.git_creation_date_localized_raw_date}}'></span>
+      </span>
+    </div>
+  {% endif %} 
+  {% if git_page_authors %}
+    <div class="md-source-file__fact">
+      <div class="md-icon" title="Created">
+        {% include "assets/imgs/git-contributors.svg" %}
+      </div>
+      <span>
+        Contributors:
+        {{ git_page_authors }}
+      </span>
+    </div>
+  {% endif %}
+</aside>
