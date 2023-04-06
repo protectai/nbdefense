@@ -6,7 +6,7 @@ on:
       - v*
 
 jobs:
-  build:
+  publish-nbdefense:
     runs-on: ubuntu-latest
     permissions:
       contents: write
