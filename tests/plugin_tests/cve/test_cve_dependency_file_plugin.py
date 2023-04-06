@@ -10,22 +10,23 @@ from nbdefense.constants import DEFAULT_SETTINGS
 
 class TestCVEDependencyFilePlugin:
     @pytest.fixture
-    def codebase(self, tmp_path: Path) -> Codebase:
+    def codebase(
+        self, tmp_path: Path, create_cve_requirements_file_path: Path
+    ) -> Codebase:
         return Codebase(
             Path("./tests/plugin_tests/cve/mock_files"),
             False,
             True,
             False,
             tmp_path,
-            requirements_file=Path(
-                "./tests/plugin_tests/cve/mock_files/requirements.txt"
-            ),
+            requirements_file=create_cve_requirements_file_path,
         )
 
     def test_scan(
         self,
         install_trivy: None,
         codebase: Codebase,
+        create_cve_requirements_file_path: Path,
     ) -> None:
         CVEDependencyFilePlugin.scan(
             codebase,
@@ -33,10 +34,10 @@ class TestCVEDependencyFilePlugin:
                 "nbdefense.plugins.CVEDependencyFilePlugin", True, DEFAULT_SETTINGS
             ),
         )
-        self.verify_scan_results(codebase)
+        self.verify_scan_results(codebase, create_cve_requirements_file_path)
 
     @staticmethod
-    def verify_scan_results(codebase: Codebase) -> None:
+    def verify_scan_results(codebase: Codebase, requiremetns_file_path: Path) -> None:
         issues = codebase.issues.to_json()
         assert len(issues) == 2
 
@@ -47,10 +48,7 @@ class TestCVEDependencyFilePlugin:
         cve1: Any = cve_list[0]
         assert cve1["code"] == "VULNERABLE_DEPENDENCY_DEP_FILE"
         assert cve1["severity"] == "CRITICAL"
-        assert (
-            cve1["details"]["file_path"]
-            == "tests/plugin_tests/cve/mock_files/requirements.txt"
-        )
+        assert cve1["details"]["file_path"] == str(requiremetns_file_path)
         assert cve1["details"]["results"]["PkgName"] == "pytorch-lightning"
         assert cve1["details"]["results"]["InstalledVersion"] == "1.5.10"
         assert cve1["details"]["results"]["FixedVersion"] == "1.6.0"
@@ -61,10 +59,7 @@ class TestCVEDependencyFilePlugin:
         cve2 = cve2[0]
         assert cve2["code"] == "VULNERABLE_DEPENDENCY_DEP_FILE"
         assert cve2["severity"] == "HIGH"
-        assert (
-            cve2["details"]["file_path"]
-            == "tests/plugin_tests/cve/mock_files/requirements.txt"
-        )
+        assert cve2["details"]["file_path"] == str(requiremetns_file_path)
         assert cve2["details"]["results"]["PkgName"] == "pytorch-lightning"
         assert cve2["details"]["results"]["InstalledVersion"] == "1.5.10"
         assert cve2["details"]["results"]["FixedVersion"] == "1.6.0"

@@ -1,3 +1,4 @@
+import os
 from pathlib import Path
 from typing import Any, Dict, List
 
@@ -6,6 +7,23 @@ import requests
 
 from nbdefense.codebase import PackageInfo
 from nbdefense.plugins.licenses.license_plugin import LicenseCache, LicensePlugin
+
+
+@pytest.fixture(scope="session")
+def create_license_requirements_file_path() -> Path:
+    current_directory = Path(os.path.dirname(os.path.realpath(__file__)))
+    requirements_directory = current_directory / "mock_files"
+    requirements_file_path = requirements_directory / "requirements.txt"
+    with open(requirements_file_path, "w") as f:
+        f.writelines(
+            [
+                "test_package_1==23.2.1\n",
+                "test_package_2==2.28.1\n",
+                "test_package_3==1.8.0\n",
+                "test_package_4==1.16.0",
+            ]
+        )
+    return requirements_file_path
 
 
 @pytest.fixture
