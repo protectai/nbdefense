@@ -1,3 +1,6 @@
+{% if "\x3ch1" not in page.content %}
+  <h1>{{ page.title | d(config.site_name, true)}}</h1>
+{% endif %}
 <!-- Page content -->
 {{ page.content }}
 

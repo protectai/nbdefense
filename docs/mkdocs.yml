@@ -92,6 +92,8 @@ extra:
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js
   - https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.1-beta.0/js/lightgallery.min.js
+  - assets/js/timeago_mkdocs.js
+  - assets/js/lightgallery_mkdocs.js
 
 extra_css:
   - assets/css/extra.css
