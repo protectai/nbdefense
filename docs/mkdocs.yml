@@ -1,4 +1,5 @@
 site_name: "NB Defense: Secure Jupyter Notebooks"
+site_url: "https://nbdefense.ai"
 
 repo_name: protectai/nbdefense
 repo_url: https://github.com/protectai/nbdefense
@@ -76,6 +77,14 @@ plugins:
       enable_creation_date: true
   - git-authors:
       sort_authors_by: contribution
+  - minify:
+      minify_js: true
+      minify_css: true
+      cache_safe: true
+      js_files:
+          - assets/js/timeago_mkdocs.js
+      css_files:
+          - assets/css/extra.css
 
 extra:
   social:
@@ -91,9 +100,7 @@ extra:
 
 extra_javascript:
   - https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js
-  - https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.1-beta.0/js/lightgallery.min.js
   - assets/js/timeago_mkdocs.js
-  - assets/js/lightgallery_mkdocs.js
 
 extra_css:
   - assets/css/extra.css
