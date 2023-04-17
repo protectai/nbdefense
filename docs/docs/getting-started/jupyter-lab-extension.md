@@ -1,3 +1,7 @@
+---
+description: Using the NB Defense JupyterLab extension.
+---
+
 ## Installation
 
 !!! info "Running NB Defense on JupyterLab in the cloud"

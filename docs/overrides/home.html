@@ -1,7 +1,11 @@
 {% extends "main.html" %} 
+{% block extrahead %}
+  {{ super() }}
+  <meta name="description" content="Brought to you by Protect AI, NB Defense is a JupyterLab Extension and a CLI tool that encourages you to think about security throughout every step of your machine learning development process. NB Defense is now open source - Begin securing your notebooks today!" />
+  <link rel="stylesheet" type="text/css" href="./assets/css/landing.css" />
+{% endblock %}
 {% block tabs %} 
   {{ super() }}
-  <link rel="stylesheet" type="text/css" href="./assets/css/landing.css" />
   <section class="nbdocs-container">
     <!-- Header -->
     <div class="nbdocs-section-top">

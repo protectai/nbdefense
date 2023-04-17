@@ -1,3 +1,7 @@
+---
+description: Using the NB Defense CLI.
+---
+
 ## Installation
 
 1.  Activate the Python environment that you would like to install the NB Defense CLI to.
