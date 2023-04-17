@@ -1,4 +1,5 @@
 site_name: "NB Defense: Secure Jupyter Notebooks"
+site_url: "https://nbdefense.ai"
 
 repo_name: protectai/nbdefense
 repo_url: https://github.com/protectai/nbdefense
