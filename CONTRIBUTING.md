@@ -40,8 +40,9 @@ If you're looking for documentation on how to use NB Defense, you can find that 
 
 Thanks for contributing! In order to open a PR into the NB Defense project, you'll have to follow these steps:
 
-1. Fork the repo
-2. Make your changes
-3. Submit a pull request
+1. Fork the repo and clone your fork locally
+2. Run `make install-dev` from the root of your forked repo to setup your environment
+3. Make your changes
+4. Submit a pull request
 
 After these steps have been completed, someone on our team at Protect AI will review the code and help merge in your changes!
