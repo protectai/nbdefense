@@ -59,7 +59,6 @@ markdown_extensions:
       anchor_linenums: true
   - pymdownx.details
   - pymdownx.inlinehilite
-  - pymdownx.snippets
   - pymdownx.superfences
   - attr_list
   - lightgallery
