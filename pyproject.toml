@@ -36,6 +36,17 @@ types-requests = "2.28.11.15"
 types-tqdm = "4.65.0.0"
 types-setuptools = "67.6.0.5"
 lxml = "^4.9.3"
+nvidia-cublas-cu11 = { version = "11.10.3.66", platform = 'linux' }
+nvidia-cuda-cupti-cu11 = { version = "11.7.101", platform = 'linux' }
+nvidia-cuda-nvrtc-cu11 = { version = "11.7.99", platform = 'linux' }
+nvidia-cuda-runtime-cu11 = { version = "11.7.99", platform = 'linux' }
+nvidia-cudnn-cu11 = { version = "8.5.0.96", platform = 'linux' }
+nvidia-cufft-cu11 = { version = "10.9.0.58", platform = 'linux' }
+nvidia-curand-cu11 = { version = "10.2.10.91", platform = 'linux' }
+nvidia-cusolver-cu11 = { version = "11.4.0.1", platform = 'linux' }
+nvidia-cusparse-cu11 = { version = "11.7.4.91", platform = 'linux' }
+nvidia-nccl-cu11 = { version = "2.14.3", platform = 'linux' }
+nvidia-nvtx-cu11 = { version = "11.7.91", platform = 'linux' }
 
 [tool.poetry.group.dev.dependencies]
 black = "22.8.0"
