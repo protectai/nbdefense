@@ -16,21 +16,20 @@ python = ">=3.8,<3.11"
 click = "^8.1.3"
 requirements-parser = "0.5.0"
 detect-secrets = "1.4.0"
-nbformat = "5.7.0"
-presidio_analyzer = "2.2.29"
-nbconvert = "7.7.4"
+nbformat = "5.10.4"
+presidio_analyzer = "2.2.354"
+nbconvert = "7.16.4"
 jinja2 = "^3.1.2"
 requests = "2.31.0"
-tqdm = "4.64.1"
+tqdm = "4.66.2"
 rich = "12.6.0"
 pandas = "^1.3.5"
-tomlkit = "0.11.6"
-
+tomlkit = "0.12.4"
 [tool.poetry.group.test.dependencies]
 pytest = "7.2.0"
 pytest-watch = "4.2.0"
 responses = "0.22.0"
-bandit = { version = "1.7.5", extras = ["toml"] }
+bandit = { version = "1.7.8", extras = ["toml"] }
 mypy = "1.1.1"
 types-requests = "2.28.11.15"
 types-tqdm = "4.65.0.0"
@@ -49,15 +48,15 @@ nvidia-nccl-cu11 = { version = "2.14.3", platform = 'linux' }
 nvidia-nvtx-cu11 = { version = "11.7.91", platform = 'linux' }
 
 [tool.poetry.group.dev.dependencies]
-black = "22.8.0"
+black = "24.4.2"
 pre-commit = "2.20.0"
-dunamai = "1.13.2"
+dunamai = "1.21.0"
 en_core_web_trf = [
   { url = "https://github.com/explosion/spacy-models/releases/download/en_core_web_trf-3.6.1/en_core_web_trf-3.6.1-py3-none-any.whl" },
 ]
 
 [tool.poetry.group.prod.dependencies]
-dunamai = "1.13.2"
+dunamai = "1.21.0"
 
 [tool.poetry-dynamic-versioning]
 enable = true
