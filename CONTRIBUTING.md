@@ -8,7 +8,7 @@ If you're looking for documentation on how to use NB Defense, you can find that 
 
 1. Python
 
-   NB Defense requires python version greater than `3.7.1` and less than `3.11`
+   NB Defense requires python version greater than `3.8` and less than `3.11`
 
 2. Poetry
 
