@@ -37,7 +37,7 @@ types-tqdm = "4.65.0.0"
 types-setuptools = "67.6.0.5"
 
 [tool.poetry.group.dev.dependencies]
-black = "22.8.0"
+black = "24.3.0"
 pre-commit = "2.20.0"
 dunamai = "1.13.2"
 en_core_web_trf = [
