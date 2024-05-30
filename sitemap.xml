@@ -2,97 +2,97 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://nbdefense.ai/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/about-us/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/faq/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/cli/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/jupyter-lab-extension/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/cloud-services/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/cloud-services/azure-ml-notebooks/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/cloud-services/sage-maker-notebook-instances/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/cloud-services/sage-maker-studio-lab/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/getting-started/cloud-services/sage-maker-studio/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/scan-settings/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/scan-settings/cli-flags/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/scan-settings/cli-settings/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/scan-settings/jupyterlab-settings/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/supported-scans/detecting-CVEs/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/supported-scans/detecting-PII/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/supported-scans/detecting-licenses/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://nbdefense.ai/supported-scans/detecting-secrets/</loc>
-         <lastmod>2023-08-25</lastmod>
+         <lastmod>2024-05-30</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
