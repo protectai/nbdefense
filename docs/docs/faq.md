@@ -15,13 +15,14 @@ We know that JupyterLab is where many data scientist experiement and prove out t
 
 Yes, you can run NB Defense in your CI pipline using the [NB Defense CLI](./getting-started/cli.md)! Use the CLI in your CI pipelines to scan repositories, or multiple notebooks at a time. 
 
-### What is special about NB Defense when many security tools offer similar functionality?
+### What is unique about NB Defense when many security tools offer similar functionality?
 
-NB Defense is special because it allows you to scan Jupyter Notebooks. We provide both a [JupyterLab Extension](./getting-started/jupyter-lab-extension.md) that you can use to scan notebooks while you're working, and a [CLI](./getting-started/cli.md) that you can use to scan groups of notebooks or repositories. Using both of these tools, you can scan your notebooks for personally identifiable information (PII), secrets, common exposures and vulnerabilities (CVEs), and non permissive licenses. 
+
+NB Defense allows you to scan Jupyter Notebooks. Currently most security tools do not support Notebook `.ipynb` formatted files. NB Defense fills this gap. We provide both a [JupyterLab Extension](./getting-started/jupyter-lab-extension.md) that you can use to scan notebooks within Jupyterlab environment, and a [CLI](./getting-started/cli.md) that you can use to scan groups of notebooks or repositories. Using both of these tools, you can scan your notebooks for personally identifiable information (PII), secrets, common exposures and vulnerabilities (CVEs), and non permissive licenses.
 
 ### Does NB Defense JupyterLab Extension run in my kernel?
 
-We recommend that you isolate NB Defense from the kernel that you are using for your notebook. If you have installed NB Defense into a separate python environment, it will not run in your kernel. We do use your active kernels python path to determine which third party dependencies are installed, so we can scan them for CVEs and licenses.
+No. We recommend installing NB Defense Jupyterlab extension outside of Kernel specific environment. NB Defense runs its code on the Jupyter Server instead of Notebook specific Kernel(s). We do use your active kernels python path to determine which third party dependencies are installed, so we can scan them for CVEs and licenses.
 
 ## Found A Bug? 🐞
 
